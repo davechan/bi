@@ -27,9 +27,9 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Letters
+  - title: Stories
     url: /articles
-  - title: Theme
+  - title: App
     url: http://mmistakes.github.io/so-simple-theme/theme-setup/
     external: true
 
