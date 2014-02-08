@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0083)https://www.tableausoftware.com/public/blog/2013/03/new-8-javascript-api-pt-ii-1854 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>New in 8: Javascript API pt. II | Tableau Public</title>
+  <meta name="keywords" content="Government and Public Data">
+<meta name="copyright" content="Copyright Tableau Software, Inc.">
+
+<link rel="shortcut icon" href="https://www.tableausoftware.com/public/sites/default/files/tableau_public_1_favicon.ico" type="image/x-icon">
+
+<link rel="alternate" type="application/rss+xml" title="Tableau Public - What&#39;s New" href="http://tableausoftware.com/public/feed.rss">
+
+  <link type="text/css" rel="stylesheet" media="all" href="./Embed Article_files/css_4582dbc0addd90d3ffe708e9cc725192.css">
+<link type="text/css" rel="stylesheet" media="print" href="./Embed Article_files/css_9f607f6b80dbc82c599a333b272ffbbb.css">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/public/sites/all/themes/tableau_public_1/ie.css?p" />
+<![endif]-->
+  <script type="text/javascript" async="" src="./Embed Article_files/ga.js"></script><script type="text/javascript" async="" src="./Embed Article_files/elqCfg.min.js"></script><script id="twitter-wjs" src="./Embed Article_files/widgets.js"></script><script async="" src="./Embed Article_files/gtm.js"></script><script type="text/javascript" src="./Embed Article_files/jquery.min.js"></script>
+<script type="text/javascript" src="./Embed Article_files/drupal.js"></script>
+<script type="text/javascript" src="./Embed Article_files/colorbox.js"></script>
+<script type="text/javascript" src="./Embed Article_files/colorbox_default_style.js"></script>
+<script type="text/javascript" src="./Embed Article_files/jquery.tweet.js"></script>
+<script type="text/javascript" src="./Embed Article_files/tab_twitter.js"></script>
+<script type="text/javascript" src="./Embed Article_files/tab_views_pager.js"></script>
+<script type="text/javascript" src="./Embed Article_files/thickbox.js"></script>
+<script type="text/javascript" src="./Embed Article_files/extlink.js"></script>
+<script type="text/javascript" src="./Embed Article_files/base.js"></script>
+<script type="text/javascript" src="./Embed Article_files/ajax_view.js"></script>
+<script type="text/javascript" src="./Embed Article_files/tracking.js"></script>
+<script type="text/javascript" src="./Embed Article_files/jquery.form.js"></script>
+<script type="text/javascript" src="./Embed Article_files/ahah.js"></script>
+<script type="text/javascript" src="./Embed Article_files/ahah_helper.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/public/", "colorbox": { "transition": "elastic", "speed": 350, "opacity": "0.85", "slideshow": false, "slideshowAuto": false, "slideshowSpeed": 2500, "slideshowStart": "", "slideshowStop": "", "current": "{current} of {total}", "previous": "« Prev", "next": "Next »", "close": "Close", "overlayClose": true, "maxWidth": "100%", "maxHeight": "100%" }, "CTools": { "pageId": "page-c930f206754f7ba807e12fb00c5506aa" }, "thickbox": { "close": "Close", "next": "Next \x3e", "prev": "\x3c Prev", "esc_key": "or Esc Key", "next_close": "Next / Close on last", "image_count": "Image !current of !total" }, "extlink": { "extTarget": "_blank", "extClass": "ext", "extSubdomains": 1, "extExclude": "(twitter\\.com\\/share)", "extInclude": "(community\\.tableausoftware\\.com.*)|(www\\.tableausoftware\\.com\\/for-companies)|(tableausoftware\\.com\\/snarge.*)", "extAlert": 0, "extAlertText": "This link will take you to an external web site. We are not responsible for their content.", "mailtoClass": "mailto" }, "views": { "ajax_path": "/public/views/ajax", "ajaxViews": [ { "view_name": "blog", "view_display_id": "block_3", "view_args": "", "view_path": "node/2307", "view_base_path": "blog", "view_dom_id": 3, "pager_element": 0 } ] }, "ahah": { "edit-submit": { "url": "/public/ahah_helper/%3Cform%3E", "event": "mousedown", "keypress": true, "wrapper": "subscribe-form", "selector": "#edit-submit", "effect": "fade", "method": "replace", "progress": { "type": "throbber" }, "button": { "op": "Download" } } } });
+//--><!]]>
+</script>
+</head>
+<body class="not-front not-logged-in node-type-post one-sidebar sidebar-right page-blog-2013-03-new-8-javascript-api-pt-ii-1854 section-blog" data-twttr-rendered="true">
+
+  <div id="page"><div id="page-inner">
+
+    <a name="navigation-top" id="navigation-top"></a>
+          <div id="skip-to-nav"><a href="https://www.tableausoftware.com/public/blog/2013/03/new-8-javascript-api-pt-ii-1854#navigation">Skip to Navigation</a></div>
+    
+    <div id="header"><div id="header-inner" class="clear-block">
+
+              <div id="logo-title">
+
+                                  <div id="logo"><a href="https://www.tableausoftware.com/public/welcome" title="Tableau Public" rel="home"><img src="./Embed Article_files/logo.png" alt="Tableau Public" id="logo-image"></a></div>
+          
+          
+        </div> <!-- /#logo-title -->
+      
+              <div id="header-blocks" class="region region-header">
+          <!-- Google Tag Manager -->
+  <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-BVCN" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-BVCN');</script>
+  <!-- End Google Tag Manager -->
+
+<div id="block-block-5" class="block block-block region-odd odd region-count-1 count-7"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="https://public.tableausoftware.com/auth?destination=workbooks" class="first">Login</a>
+<a href="http://www.tableausoftware.com/business-intelligence" class="last">Tableau for Companies</a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+        </div> <!-- /#header-blocks -->
+            
+      		<div id="search-box">
+		  <form action="https://www.tableausoftware.com/public//blog/2013/03/new-8-javascript-api-pt-ii-1854" accept-charset="UTF-8" method="post" id="search-theme-form">
+<div><div id="search" class="container-inline">
+  <div class="form-item" id="edit-search-theme-form-1-wrapper">
+ <label for="edit-search-theme-form-1">SEARCH </label>
+ <input type="text" maxlength="128" name="search_theme_form" id="edit-search-theme-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text">
+</div>
+<input type="submit" name="op" id="edit-submit-1" value="go" class="form-submit">
+<input type="hidden" name="form_build_id" id="form-fea33793b31c9965f9083557c9127b6e" value="form-fea33793b31c9965f9083557c9127b6e">
+<input type="hidden" name="form_id" id="edit-search-theme-form" value="search_theme_form">
+</div>
+
+</div></form>
+		</div> <!-- /#search-box -->
+	  
+    </div></div> <!-- /#header-inner, /#header -->
+    
+    	<div id="navbar"><div id="navbar-inner" class="clear-block region region-navbar">
+
+	  <a name="navigation" id="navigation"></a>
+
+	  		<div id="primary" class="clear-block">
+		  <ul class="links"><li class="menu-524 first"><a href="https://www.tableausoftware.com/public/how-it-works" title="How It Works">How It Works</a></li>
+<li class="menu-560"><a href="https://www.tableausoftware.com/public/gallery" title="Gallery">Gallery</a></li>
+<li class="menu-3848"><a href="https://www.tableausoftware.com/public/community" title="Community">Community</a></li>
+<li class="menu-918 last"><a href="https://www.tableausoftware.com/public/download" title="Download">Download</a></li>
+</ul>		</div> <!-- /#primary -->
+	  
+	  
+	  
+	</div></div> <!-- /#navbar-inner, /#navbar -->
+    
+    <div id="main"><div id="main-inner" class="clear-block with-navbar">
+
+      <div id="content"><div id="content-inner">
+
+                
+        
+        
+        
+
+                
+                
+        <div id="content-area">
+          <div id="node-1854" class="node node-type-post page-t teaser-f"><div class="node-inner">
+
+
+  <a href="https://www.tableausoftware.com/public/blog/2013/03/new-8-javascript-api-pt-ii-1854#comments" class="comments-jump">Comments</a>
+  <h1 class="title"><a href="./Embed Article_files/Embed Article.htm" title="New in 8: Javascript API pt. II" class="title">New in 8: Javascript API pt. II</a></h1>
+
+    
+  <div class="full-meta">
+	<div class="fb-like">
+	    <iframe src="./Embed Article_files/like.htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:20px;" allowtransparency="true"></iframe>
+	</div>
+  	<div class="tweet-this">
+	    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Embed Article_files/tweet_button.1390956745.htm" class="twitter-share-button twitter-tweet-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 110px; height: 20px;"></iframe>
+	    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+		<p class="submitted">
+		by Daniel Hom - Mar. 8th 2013	</p>
+  </div>
+  
+  <div class="content">
+    <span class="print-link"></span><script src="./Embed Article_files/tableau_v8.debug.js"></script><p>
+In our last <a href="http://www.tableausoftware.com/public/blog/2013/02/java-api-1831">blog post</a> you saw how we can use the new Javascript API in Tableau Public 8.0 to play and pause a viz and automate some of the filtering.</p>
+<p>You can use the API to control any Tableau Public viz that you embed on your website, and you can use any interactive functionality you'd expect: filters, actions, mark selection, the list goes on.  This lets you create seamless, integrated experiences that combine your viz with graphics, buttons and other text. In short, you can program Tableau.</p>
+<p>For example, let's say you write an article about school dropout rates in the US state of Washington.</p>
+<p>You might write about how overall, the dropout rate fell to 3.3 percent, but you'd like your readers to easily <a href="javascript://;" javascript:void(0)="" id="king">home in on King county</a>, which had the lowest dropout rate of the entire state. </p>
+<p>Then you want to call out two counties with high dropout rates: Both <a href="javascript://;" id="clallam">Clallam</a> and <a href="javascript://;" id="skamania">Skamania</a> counties saw dropout rates in 2011 over 20 percent (21 and 29 percent, respectively).</p>
+<p>After that, you'll show a dashboard of <a href="javascript://;" id="dashboard">complete summary statistics</a> about Washington dropout rates.</p>
+<p>And then give your readers the ability to <a href="javascript://;" id="ogdashboard">to return to the interactive application</a>.</p>
+<p>And while you're at it, it's a good idea to give your readers a way to <a href="javascript://;" id="clear">clear any selections</a> that they've made. </p>
+<style>div#myVizContainer
+{
+  height: 420px;
+  border: 2px;
+  width: 655px;
+  padding: 3px;
+
+
+}</style><div id="myVizContainer"><div style="position: relative; top: 0px; left: 0px; right: 0px; bottom: 0px; border: 0px; padding: 0px; margin: 0px; overflow: hidden;"><iframe frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" src="./Embed Article_files/2011DropoutRates.htm" style="width: 655px; height: 420px; display: block;"></iframe></div></div>
+<p>You get the idea.</p>
+<p>After the official release of Tableau Public 8.0, we'll upload a training video that talks about how to do some specific API functions, along with some official documentation about what's available.<br>
+<a href="http://onlinehelp.tableausoftware.com/current/server/en-us/js_api.htm">JavaScript API documentation now available</a></p>
+<p>Check out the rest of the New in 8 Series:</p>
+<p>Part 1: <a href="http://www.tableausoftware.com/public/blog/2013/01/new-8-freeform-dashboards-1778">Freeform Dashboard Design</a><br>
+Part 2: <a href="http://www.tableausoftware.com/public/blog/2013/01/new-8-freeform-dashboards-map-1787">Floating Dashboard Content on Maps</a><br>
+Part 3: <a href="http://www.tableausoftware.com/public/blog/2013/01/treemap-bar-charts-1797">Treemap Bar Charts</a><br>
+Part 4: <a href="http://www.tableausoftware.com/public/blog/2013/02/bubble-charts-1808">Bubble Charts</a><br>
+Part 5: <a href="http://www.tableausoftware.com/public/blog/2013/02/new-8-word-clouds-1825">Word Clouds</a><br>
+Part 6: <a href="http://www.tableausoftware.com/public/blog/2013/02/java-api-1831">Javascript API Pt. 1</a><br>
+Part 7: <a href="http://www.tableausoftware.com/public/blog/2013/03/powerful-new-tools">Groups, Filters and the Marks Card</a></p>
+<script type="text/javascript">
+
+            var placeholder, url, options, viz, workbook, link;
+
+            placeholder = document.getElementById("myVizContainer");
+            url = "http://public.tableausoftware.com/views/STeducationdemo_small/2011DropoutRates?:embed=y&:display_count=no"
+            var options = {
+                    hideTabs: true,
+                    width: "655px",
+                    height: "420px",
+                                        }
+            viz = new tableauSoftware.Viz(placeholder, url, options);
+
+            
+function resetViz(workbook) {
+  return workbook.revertAllAsync().then(function () {
+    // Clear the selection on the active sheets.
+    return workbook.getActiveSheet().clearSelectedMarksAsync();
+  });
+}
+
+			king = document.getElementById("king");
+            var a = function() {
+				sheet = viz.getWorkbook().getActiveSheet().getWorksheets()[0]
+                sheet.selectMarksAsync(
+                "County",'King', "REPLACE");
+			}
+			king.onclick = a;
+			
+					
+			clear = document.getElementById("clear");
+            var d = function() {
+				sheet = viz.getWorkbook().getActiveSheet().getWorksheets()[0]
+                sheet.clearSelectedMarksAsync();
+			}
+			clear.onclick = d;
+
+       	
+			
+			dashboard = document.getElementById("dashboard");
+            var c = function() {
+				sheet = viz.getWorkbook().activateSheetAsync("Summary Statistics");
+			}
+			dashboard.onclick = c;
+
+
+	    ogdashboard = document.getElementById("ogdashboard");
+            var g = function() {
+				sheet = viz.getWorkbook().activateSheetAsync("2011 Dropout Rates");
+			}
+			ogdashboard.onclick = g;
+
+            clallam = document.getElementById("clallam");
+            var e = function() {
+				sheet = viz.getWorkbook().getActiveSheet().getWorksheets()[0]
+                sheet.selectMarksAsync(
+                "County",'Clallam', "REPLACE");
+			}
+			clallam.onclick = e;
+
+            skamania = document.getElementById("skamania");
+            var f = function() {
+				sheet = viz.getWorkbook().getActiveSheet().getWorksheets()[0]
+                sheet.selectMarksAsync(
+                "County",'Skamania', "REPLACE");
+			}
+			skamania.onclick = f;
+
+        </script>  </div>
+  <div style="position:relative;height:23px;">
+      
+          <div class="terms">
+  		<span>Category</span>
+  		<a href="https://www.tableausoftware.com/public/blog/category/Government-and-Public-Data">Government and Public Data</a>    	</div>
+      </div>		
+
+</div></div> <!-- /node-inner, /node -->
+        </div>
+
+        
+        
+      </div></div> <!-- /#content-inner, /#content -->
+
+      
+              <div id="sidebar-right" class="sidebar"><div id="sidebar-right-inner" class="region region-right">
+          
+<div id="block-menu_block-2" class="block block-menu_block region-odd odd region-count-1 count-1"><div class="block-inner">
+
+      <h3 class="nav-title">Community</h3>
+  
+  <div class="content">
+    <div class="menu-block-2 menu-name-primary-links parent-mlid-3848 menu-level-1">
+  <ul class="menu"><li class="leaf first menu-mlid-2155"><a href="https://www.tableausoftware.com/public/blog">Blog</a></li>
+<li class="leaf menu-mlid-5169"><a href="https://www.tableausoftware.com/public/training" title="">Training</a></li>
+<li class="leaf menu-mlid-5921"><a href="http://www.tableausoftware.com/public/profilefinder" title="">Find an Author</a></li>
+<li class="leaf menu-mlid-5920"><a href="http://kb.tableausoftware.com/" title="">Knowledge Base</a></li>
+<li class="leaf menu-mlid-1210"><a href="http://community.tableausoftware.com/" title="" target="_blank" class="ext">Forums</a></li>
+<li class="leaf menu-mlid-5922"><a href="http://www.tapestryconference.com/" title="Learn more about data storytelling at Tapestry." class="ext" target="_blank">Data Storytelling at Tapestry</a></li>
+<li class="leaf menu-mlid-3805 has-children"><a href="https://www.tableausoftware.com/public/community/best-practices" title="Best Practices">Best Practices</a></li>
+<li class="leaf menu-mlid-5154"><a href="https://www.tableausoftware.com/public/community/sample-data-sets" title="Sample Data Sets">Sample Data Sets</a></li>
+<li class="leaf last menu-mlid-5183"><a href="http://trust.tableausoftware.com/status/tableau-public" title="">Current Status</a></li>
+</ul></div>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-9" class="block block-block region-even even region-count-2 count-2"><div class="block-inner">
+
+      <h3 class="title">Join the Tableau Community</h3>
+  
+  <div class="content">
+    <a href="http://twitter.com/tableau" target="_blank"><img alt="Tableau on Twitter" src="./Embed Article_files/twitter.png"> Twitter</a>
+<a href="http://www.facebook.com/pages/Tableau-Software/27228877081" target="_blank"><img alt="Tableau on Facebook" src="./Embed Article_files/facebook.png"> Facebook</a>
+<a href="http://www.linkedin.com/groups?home=&gid=118463" class="last" target="_blank"><img alt="Tableau on LinkedIn" src="./Embed Article_files/linkedin.png"> LinkedIn</a>
+<a href="https://www.tableausoftware.com/public/feed.rss" class="first"><img alt="Tableau Public RSS" src="./Embed Article_files/rss.png"> RSS</a>
+
+<div style="border:5px solid #f5f5f5;">
+  <iframe src="./Embed Article_files/likebox.htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:225px; height:62px;" allowtransparency="true"></iframe>
+</div>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-30" class="block block-block region-odd odd region-count-3 count-3"><div class="block-inner">
+
+      <h3 class="title">Twitter Feed</h3>
+  
+  <div class="content" data-twttr-id="twttr-sandbox-0">
+    <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-timeline twitter-timeline-rendered" style="border: none; max-width: 100%; min-width: 180px;" title="Twitter Timeline" width="225" height="467"></iframe><span class="ext"></span>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><br>
+<a href="http://twitter.com/home?status=%23tableau" class="ext" target="_blank">Tell us what you created with #tableau</a><span class="ext"></span>
+<br>
+<br>
+<a href="http://twitter.com/#!/search/%23tableau" class="ext" target="_blank">See the conversation</a><span class="ext"></span>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-related_content-block_1" class="block block-views region-even even region-count-4 count-4"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="view view-related-content view-id-related_content view-display-id-block_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+    <div id="node-63" class="node node node-teaser node-type-quote">
+
+  <p>I was impressed how Tableau Public helped me create a more analytical visualization that was easy to share on the web. It’s an amazing product.</p>
+<div class="field field-type-text field-field-author-name">
+    <div class="field-items">
+            <div class="field-item odd">
+                    Robert Kosara        </div>
+        </div>
+</div>
+<div class="field field-type-nodereference field-field-company">
+    <div class="field-items">
+            <div class="field-item odd">
+                    Eager Eyes        </div>
+        </div>
+</div>
+  
+  
+  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-related_content-block_4" class="block block-views region-odd odd region-count-5 count-5"><div class="block-inner">
+
+      <h3 class="title">Related Vizes</h3>
+  
+  <div class="content">
+    <div class="view view-related-content view-id-related_content view-display-id-block_4 view-dom-id-2">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/gallery/centenarians-argentina">Centenarians in Argentina</a></span>
+  </div>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/gallery/tracking-bike-traffic">Tracking Bike Traffic</a></span>
+  </div>
+  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/gallery/studentloandefaults">Student Loan Default Rates</a></span>
+  </div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-29" class="block block-block region-even even region-count-6 count-6"><div class="block-inner">
+
+  
+  <div class="content">
+    <div style="display: none;"><a href="http://www.mindset.co.za/learn/organisational.php?year=6402" class="ext" target="_blank">headon</a><span class="ext"></span></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+        </div></div> <!-- /#sidebar-right-inner, /#sidebar-right -->
+      
+    </div></div> <!-- /#main-inner, /#main -->
+    
+    
+        <div id="footer-top" class="region region-footer_top">
+      
+<div id="block-tab_toolbox-0" class="block block-tab_toolbox region-odd even region-count-1 count-10"><div class="block-inner">
+
+      <h3 class="title">Recent Comments</h3>
+  
+  <div class="content">
+    <div class="item-list"><ul><li><a href="https://www.tableausoftware.com/public/blog/2013/11/tableau-public-81-launches-2226#comment-21691">how large is this "corner"</a><br>3 days 10 hours ago</li><li><a href="https://www.tableausoftware.com/public/blog/2014/01/wrapping-data-blogging-month-2311#comment-21690">where is the osx version of</a><br>3 days 10 hours ago</li><li><a href="https://www.tableausoftware.com/public/blog/2014/01/wrapping-data-blogging-month-2311#comment-21689">This was a great session with</a><br>6 days 8 hours ago</li><li><a href="https://www.tableausoftware.com/public/blog/2014/01/top-5-2013-winners-2281#comment-21687">Hi Jufox:
+There are quite a</a><br>1 week 2 days ago</li><li><a href="https://www.tableausoftware.com/public/blog/2014/01/create-blog-3-minutes-2298#comment-21686">Hi Andy,
+Thank you for your</a><br>1 week 3 days ago</li></ul></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-blog-block_3" class="block block-views region-even odd region-count-2 count-11"><div class="block-inner">
+
+      <h3 class="title">Recent Posts</h3>
+  
+  <div class="content">
+    <div class="view view-blog view-id-blog view-display-id-block_3 view-dom-id-3 views-processed">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/blog/2014/01/wrapping-data-blogging-month-2311">Wrapping up Data Blogging Month</a></span>
+  </div>
+  
+  <div class="views-field-comment-count">
+          <label class="views-label-comment-count">
+        Comment(s):
+      </label>
+                <span class="field-content">2</span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/blog/2014/01/pay-it-forward-reasons-blog-2307" class="active">"I blog to pay it forward"</a></span>
+  </div>
+  
+  <div class="views-field-comment-count">
+          <label class="views-label-comment-count">
+        Comment(s):
+      </label>
+                <span class="field-content">0</span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/blog/2014/01/my-data-blog-story-2301">My Data Blog Story</a></span>
+  </div>
+  
+  <div class="views-field-comment-count">
+          <label class="views-label-comment-count">
+        Comment(s):
+      </label>
+                <span class="field-content">0</span>
+  </div>
+</li>
+          <li class="views-row views-row-4 views-row-even views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/blog/2014/01/create-blog-3-minutes-2298">How to start a data blog in 3 minutes. #3minwin</a></span>
+  </div>
+  
+  <div class="views-field-comment-count">
+          <label class="views-label-comment-count">
+        Comment(s):
+      </label>
+                <span class="field-content">1</span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-gallery_topics-block_2" class="block block-views region-odd even region-count-3 count-12"><div class="block-inner">
+
+      <h3 class="title">Categories</h3>
+  
+  <div class="content">
+    <div class="view view-gallery-topics view-id-gallery_topics view-display-id-block_2 view-dom-id-3 views-processed">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-name">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/blog/category/Business-and-Real-Estate">Business and Real Estate</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-name">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/blog/category/Government-and-Public-Data" class=" node-topic">Government and Public Data</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field-name">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/blog/category/Health-and-Science">Health and Science</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field-name">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/blog/category/Social-Media">Social Media</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-5 views-row-odd">  
+  <div class="views-field-name">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/blog/category/Sports">Sports</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-6 views-row-even views-row-last">  
+  <div class="views-field-name">
+                <span class="field-content"><a href="https://www.tableausoftware.com/public/blog/category/Travel-and-Lifestyle">Travel and Lifestyle</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-tab_forms-0" class="block block-tab_forms region-even odd region-count-4 count-13"><div class="block-inner">
+
+      <h3 class="title">Subscribe</h3>
+  
+  <div class="content">
+    <div id="subscribe-form"></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+    </div> <!-- /#footer-top -->
+    
+          <div id="footer"><div id="footer-inner" class="region region-footer">
+
+        
+        
+<div id="block-block-6" class="block block-block region-odd even region-count-1 count-8"><div class="block-inner">
+
+  
+  <div class="content">
+    Follow us
+<a href="https://www.tableausoftware.com/public/feed.rss" class="first"><img alt="Tableau Public RSS" src="./Embed Article_files/rss.png"></a>
+<a href="http://twitter.com/tableau" target="_blank"><img alt="Tableau on Twitter" src="./Embed Article_files/twitter.png"></a>
+<a href="http://www.facebook.com/pages/Tableau-Software/27228877081" target="_blank"><img alt="Tableau on Facebook" src="./Embed Article_files/facebook.png"></a>
+<a href="http://www.linkedin.com/groups?home=&gid=118463" class="last" target="_blank"><img alt="Tableau on LinkedIn" src="./Embed Article_files/linkedin.png"></a>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-15" class="block block-block region-even odd region-count-2 count-9"><div class="block-inner">
+
+  
+  <div class="content">
+    <div style="margin-bottom:5px;">
+ ©2014 <a href="http://www.tableausoftware.com/">Tableau Software</a>, Incorporated and its licensors. All rights reserved.
+ <a href="https://www.tableausoftware.com/public/privacy-policy" class="first list">Privacy Policy</a> <a href="https://www.tableausoftware.com/public/terms" class="list">Terms of Use</a> <a href="https://www.tableausoftware.com/public/contact" class="list">Contact Us</a> <a href="https://www.tableausoftware.com/public/blog" class="last list">Blog</a></div>
+Tableau also offers professional software for <a href="http://www.tableausoftware.com/data-analysis">data analysis</a>, <a href="http://www.tableausoftware.com/business-intelligence">business intelligence</a> and <a href="http://www.tableausoftware.com/products/desktop">data visualization</a>.  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+      </div></div> <!-- /#footer-inner, /#footer -->
+    
+  </div></div> <!-- /#page-inner, /#page -->
+
+  
+  <div><a href="http://www.tableausoftware.com/crazy.php" style="display: none;">non-humans click here</a></div>
+
+
+<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" style="display: none;"></iframe><script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["rollup._setAccount","UA-625217-1"]);_gaq.push(["rollup._addIgnoredRef","tableausoftware.com"]);_gaq.push(["rollup._setDomainName","tableausoftware.com"]);_gaq.push(["rollup._setAllowAnchor",!0]);_gaq.push(["rollup._setAllowLinker",!0]);_gaq.push(["rollup._setCampSourceKey","distribution"]);_gaq.push(["rollup._setCampMediumKey","ls"]);_gaq.push(["rollup._setCampNameKey","lsd"]);_gaq.push(["rollup._setCampTermKey","kw"]);_gaq.push(["rollup._trackPageview"]);
+(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+<script type="text/javascript" src="./Embed Article_files/80700021.js"></script>
+</body></html>

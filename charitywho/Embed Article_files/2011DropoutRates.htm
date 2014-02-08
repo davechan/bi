@@ -1,0 +1,662 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0158)http://public.tableausoftware.com/views/STeducationdemo_small/2011DropoutRates?:embed=y&:display_count=no&:embed=y&:tabs=n&:loadOrderID=9999&:apiID=handler0#1 -->
+<html class="dj_khtml dj_safari dj_contentbox"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Expires" content="Thu, 01 Jan 1970 00:00:00 GMT">
+<meta http-equiv="Cache-Control" content="no-cache, no-store">
+<meta http-equiv="Pragma" content="no-cache">
+
+
+
+
+
+<meta property="fb:app_id" content="242391562456920">
+<meta property="og:title" content="STeducationdemo_small">
+<meta property="og:type" content="article">
+<meta property="og:image" content="http://public.tableausoftware.com/thumb/views/STeducationdemo_small/2011DropoutRates">
+<meta property="og:site_name" content="Tableau Software">
+    
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@tableau">
+        <meta name="twitter:title" content="STeducationdemo_small">
+        <meta name="twitter:description" content="STeducationdemo_small">
+        <meta name="twitter:creator" id="twitter_creator" content="">
+        <meta name="twitter:image:src" content="http://public.tableausoftware.com/thumb/views/STeducationdemo_small/2011DropoutRates">
+        <meta name="twitter:domain" content="Tableau Public">
+    
+
+
+<title>Workbook: STeducationdemo_small</title>
+<style type="text/css">
+html body { position: absolute; left: 0; right: 0; bottom: 0; top: 0; }
+body { margin: 0; padding: 0; }
+div, img { box-shadow: none; }
+body.lyteboxed { min-width: 710px; }
+#centeringContainer.lyteboxed {
+    width: 650px;
+    margin-left: -325.0px;
+    min-height: 409px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.65);
+    background: #ffffff;
+}
+#lyteboxClose {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    display: none;
+    z-index: 100;
+}
+#lyteboxClose a img {
+    border: none;
+}
+#primaryContent, #primaryContentLink {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    border: 0;
+    display: block;
+}
+#primaryContentLink {
+   opacity: 0.4;
+   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=4)";
+   filter: alpha(opacity=40);
+   background-color: black;
+   left: 0;
+}
+#tabBootErr {
+  display: none;
+  position: absolute;
+  top: 100px;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  border: 1px solid #000000;
+  background: #fff;
+  padding: 0px;
+  box-shadow: 0px 5px 10px #adadad;
+  -webkit-box-shadow: 0px 5px 10px #adadad;
+  -moz-box-shadow: 0px 5px 10px #adadad;
+}
+#tabBootErrTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11pt;
+  font-weight: bold;
+  color: #1F437D;
+  background-color: #EBEEF3;
+  padding: 5px 6px 3px 6px;
+}
+#tabBootErrBody{
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  background: #fff;
+  border: none;
+  border-top: 1px solid #000;
+  padding: 10px;
+}
+#tabBootErrMsg {
+  white-space: pre-line;
+}
+.lyteboxed .wcBody .wcVizContainer .wcVizDisplay{
+    overflow: hidden;
+}
+</style>
+
+<!--[if gte IE 9]>
+<style type="text/css">
+  .gradient {
+     filter: none !important;
+  }
+</style>
+<![endif]-->
+<link href="tundra.css" media="screen" rel="Stylesheet" type="text/css">
+<link href="tableau.css" media="screen" rel="Stylesheet" type="text/css">
+<link href="vqlweb.css" media="screen" rel="Stylesheet" type="text/css">
+<script type="text/javascript" src="clientweb_en-us.xd.js"></script></head>
+<body class="tundra tableau  public" marginwidth="0" marginheight="0" style="-webkit-tap-highlight-color: transparent;">
+<iframe id="primaryContent" scrolling="no" frameborder="0" style="display:none"></iframe>
+<a href="" id="primaryContentLink" style="display:none"></a>
+
+
+
+
+
+<div id="initializing_thin_client" class="wcBody">
+  
+    <div id="loadingSpinner" style="display: none; opacity: 0;"><img src="30x30REV.gif"></div>
+  
+  
+    <div class="wcGlassPane" id="loadingGlassPane" style="cursor: default; display: none; opacity: 0;"></div>
+  
+</div>
+
+
+
+<script type="text/javascript">
+  var embedder = window.top;
+  if (embedder && embedder.postMessage) {
+    
+    embedder.postMessage("tableau.loadIndicatorsLoaded", "*");
+  }
+</script>
+
+
+
+<div id="centeringContainer">
+
+
+<div id="tabBootErr"><div id="tabBootErrTitle">Unexpected Error</div><div id="tabBootErrBody">An unexpected error occurred. If you continue to receive this error please contact your Tableau Server Administrator.<div id="tabBootErrMsg"></div></div></div>
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+  var hideEl = function(id) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.style.display = "none";
+    }
+  };
+  window.onerror = function(message) {
+    var errEl = document.getElementById("tabBootErr"),
+      messEl = errEl.childNodes[1].lastChild;
+    if ("innerText" in messEl) {
+        messEl.innerText += ("\n" + message);
+    } else {
+        messEl.textContent += ("\n" + message);
+    }
+    errEl.style.display = "block";
+    // hide the glass pane/spinner
+    hideEl("loadingGlassPane");
+    hideEl("loadingSpinner");
+    try {
+      window.parent.postMessage("tableau.completed", "*");
+    } catch (e) { }
+    return false;
+  };
+})();
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+djConfig = {
+  parseOnLoad: true,
+  usePlainJson: true,
+  dojoIframeHistoryUrl: "\x2Fvizql\x2Fv_81001312312105\x2Fjavascripts\x2Fdojo\x2Fresources\x2Fiframe_history.html",
+  noFirebugLite: true,
+  useXDomain: true
+ };
+
+djConfig.modulePaths = {
+  tableau: "http://publicstaticcdn.tableausoftware.com/vizql/v_81001312312105/javascripts/tableau",
+  dojo: "http://publicstaticcdn.tableausoftware.com/vizql/v_81001312312105/javascripts/dojo",
+  dijit: "http://publicstaticcdn.tableausoftware.com/vizql/v_81001312312105/javascripts/dijit",
+  dojox: "http://publicstaticcdn.tableausoftware.com/vizql/v_81001312312105/javascripts/dijit"
+};
+djConfig.dojoBlankHtmlUrl = "\x2Fvizql\x2Fv_81001312312105\x2Fjavascripts\x2Fblank.html";
+djConfig.baseUrl = "http://publicstaticcdn.tableausoftware.com/vizql/v_81001312312105/vizql/";
+
+tsConfig = {
+  logging: false,
+  history: true,
+  allow_select: true,
+  allow_filter: true,
+  allow_sheetlink: true,
+  allow_highlight: true,
+  allow_tooltip: true,
+  allow_view_underlying: false,
+  allow_custom_views: false,
+  allow_custom_view_default: false,
+  allow_custom_view_share: false,
+  allow_custom_view_save: false,
+  allow_authoring: false,
+  allow_save: false,
+  allow_save_as: false,
+  allow_subscriptions: false,
+  auth_token: "",
+  workbook_owner_friendly_name: "Tableau\x20Digital\x20Team",
+  is_guest: true,
+  current_user_id: 2,
+  current_user_email: "",
+  current_user_friendly_name: "Guest",
+  current_user_qualified_name: "guest",
+  current_custom_view_id: null,
+  vizql_root: "\x2Fvizql\x2Fw\x2FSTeducationdemo_small\x2Fv\x2F2011DropoutRates",
+  site_root: "",
+  single_frame: true,
+  composite_size: { minw: 650, maxw: 650, minh: 350, maxh: 350 }, 
+  visible_sheets: ["2011\x20Dropout\x20Rates", "Summary\x20Statistics"],
+  is_mobile: false,
+  is_mobile_device: false,
+  is_mobile_app: false,
+  is_authoring: false,
+  is_metrics_view: false,
+  is_metrics_enabled: false,
+  getScale: null,
+  is_touch: ('ontouchstart' in window), 
+  repository_urls: ["STeducationdemo_small\x2F2011DropoutRates", "STeducationdemo_small\x2FSummaryStatistics"],
+  origin_repository_url: "STeducationdemo_small\x2F2011DropoutRates",
+  workbook_repo_url: "STeducationdemo_small",
+  tabs_allowed: false, 
+  showTabsWorkbook: true,
+  mobile_app_cookie: "",
+  current_project_id: "12994",
+  current_sheet_name: "",
+  current_workbook_name: "STeducationdemo_small",
+  sheetId: "2011\x2520Dropout\x2520Rates",
+  showParams: "\x7B\x22revertType\x22\x3Anull,\x22refresh\x22\x3Afalse,\x22checkpoint\x22\x3Afalse,\x22sheetName\x22\x3A\x22\x22,\x22unknownParams\x22\x3A\x22\x22,\x22layoutId\x22\x3A\x22\x22\x7D",
+  stickySessionKey: "\x7B\x22isAuthoring\x22\x3Afalse,\x22workbookId\x22\x3A428723\x7D",
+  filterTileSize: 200,
+  locale: 'en_US',
+  language: 'en_US',
+  version: '8.1',
+  is_saas: false,
+  installed_help_uri: 'http\x3A\x2F\x2Fpublicstaticcdn.tableausoftware.com\x2Fv_81001312312105\x2Fhelp\x2F',
+  contact_support_uri: '',
+  clear_session_on_unload: true,
+  lyteboxedVizHeight: 350,
+  lyteboxedVizWidth: 650,
+  facebookAppID: "242391562456920",
+  facebookRedirectURI: "http\x3A\x2F\x2Ffacebook.com",
+  facebookDescription: "Follow\x20the\x20link\x20to\x20view\x20the\x20data",
+  embedCodeTableauLink: "http\x3A\x2F\x2Fwww.tableausoftware.com\x2Fpublic\x2Fabout\x2Dtableau\x2Dproducts",
+  is_browser_rendering_requested: true,
+  bootstrapOnMouseover: false,
+  browser_rendering_threshold: 100,
+  serverSmallLogo: "\x2Fimages\x2Ftableau\x2Dicon.gif",
+  serverSmallLogoWidth: parseInt("26", 10),
+  serverSmallLogoHeight: parseInt("26", 10),
+  publish_date: new Date(1363813944407),
+  show_byline: true,
+  isIpadApp: false,
+  forceToolbarTop: false,
+  sessionid: "6BC4DE10B91E41A7A98425C381DD35CA\x2D0\x3A0",
+  layoutid: parseInt("\x2D1", 10),
+  toolbarContainerVis: true,
+  toolbarvis: true,
+  toolbarvisDefault: true,
+  linktarget: "",
+  watermarklogo: "http\x3A\x2F\x2Fpublicstaticcdn.tableausoftware.com\x2Fvizql\x2Fv_81001312312105\x2Fimages\x2Fwatermark.png",
+  watermarkname: "Tableau\x20Software",
+  watermarkdisplay: true,
+  watermarklink: "http\x3A\x2F\x2Fwww.tableausoftware.com\x2Fpublic\x2Fabout\x2Dtableau\x2Dproducts",
+  requestURI: "http\x3A\x2F\x2Fpublic.tableausoftware.com\x2Fviews\x2FSTeducationdemo_small\x2F2011DropoutRates\x3F\x3Aembed\x3Dy\x26\x3Atabs\x3Dn\x26\x3Adisplay_count\x3Dno\x26\x3AloadOrderID\x3D9999\x26\x3AapiID\x3Dhandler0",
+  blogURI: "",
+  embeddedTitle: "",
+  embedded: true,
+  staticImage:"http\x3A\x2F\x2Fpublic.tableausoftware.com\x2Fstatic\x2Fimages\x2FST\x2FSTeducationdemo_small\x2F2011DropoutRates\x2F1_rss.png",
+  baseViewThumbLink:"http\x3A\x2F\x2Fpublic.tableausoftware.com\x2Fthumb\x2Fviews\x2FSTeducationdemo_small\x2F2011DropoutRates",
+  isPublic: true,
+  gbrand: false,
+  serverGuestURI: "http\x3A\x2F\x2Fwww.tableausoftware.com",
+  previewMode: false,
+  fromWg: false,
+  downloadURI: "",
+  serverName: "Tableau\x20Public",
+  serverLogo: "\x2Fimages\x2FtableauPublicSmall.png",
+  showTabs: false,
+  showTabsDefault: true,
+  repositoryUrl:"STeducationdemo_small\x2F2011DropoutRates",
+  parentID:"",
+  showRefreshData: false,
+  guid: "",
+  statefulURL: true,
+  primaryContentUrl: "",
+  shareDescription: "STeducationdemo_small",
+  
+  showLytebox: window.top == window && !!'' && !false,
+  showShareOptions: true,
+  showViewCount: false,
+  viewCountThreshold: 1,
+  workbookName: "STeducationdemo_small",
+  hostname: "publicstaticcdn.tableausoftware.com\x2F",
+  syncSession: "",
+  external_static_asset_prefix: "http\x3A\x2F\x2Fpublicstaticcdn.tableausoftware.com\x2Fvizql\x2Fv_81001312312105",
+  local_static_asset_prefix: "\x2Fvizql\x2Fv_81001312312105",
+  animateTransition: true,
+  loadOrderID: parseInt("9999", 10),
+  apiID: "handler0",
+  highDpi: true,
+  pixelRatio: null,
+  isBootstrapFromAutoSave: false,
+  schemeWhitelist: "http\x3A,https\x3A,mailto\x3A,news\x3A,gopher\x3A"
+};
+
+try {
+    if (window.parent && window.parent.setSize && window.parent.resizeViewer) {
+        window.parent.setSize(tsConfig.composite_size, 59);
+        window.parent.resizeViewer();
+        tsConfig.single_frame = false;
+    } 
+    if (window.parent) {
+        window.parent.vql_session_id = "6BC4DE10B91E41A7A98425C381DD35CA\x2D0\x3A0";
+    }
+} catch(o) { 
+    // If we can't reach our parent, then we must be embedded cross-domain.
+    // That's okay, it just means the viz can't be resized as the window changes size.
+    // We don't want to log an error here, as it is a common and expected case.
+}
+if (window.console)
+{ if (window.location.search.search(/[?&][:]?debug=/) != -1)
+  { djConfig.isDebug = true; djConfig.debugAtAllCosts = true; } 
+}
+
+//]]>
+</script>
+
+
+<div id="top_toolbar" class="top_toolbar" style="display: none;"></div>
+
+<div class="tabbedNavigationWrapper" id="tabbedNavigationWrapper" style="border:none;">
+    <div style="width: 100%; display: none;" class="tabbedNavigationOuterWrapper dijitContainer tableauTabbedNavigation" id="tabbedNavigation" widgetid="tabbedNavigation"><div id="container" dojotype="dijit.layout.LayoutContainer" style="width: 100%; height: 100%;" dojoattachpoint="_innerWrapper" widgetid="container" class="dijitContainer dijitLayoutContainer"><span class="dijit dijitReset dijitLeft dijitInline tabsMenuBtn dijitButton dijitAlignLeft" dojoattachevent="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse" widgetid="menuBtn" style="display: none; left: 0px; top: 0px; right: auto; bottom: auto; height: 22px;"><span class="dijitReset dijitRight dijitInline"><span class="dijitReset dijitInline dijitButtonNode"><button class="dijitReset dijitStretch dijitButtonContents tnMenuButton" dojoattachpoint="titleNode,focusNode" name="" type="button" wairole="button" waistate="labelledby-menuBtn_label" role="button" aria-labelledby="menuBtn_label" id="menuBtn" tabindex="0"><span class="dijitReset dijitInline" dojoattachpoint="iconNode"><span class="dijitReset dijitToggleButtonIconChar">✓</span></span><span class="dijitReset dijitInline dijitButtonText" id="menuBtn_label" dojoattachpoint="containerNode"></span></button></span></span></span><span class="dijit dijitReset dijitLeft dijitInline tabsLeftBtn dijitAlignLeft dijitButton dijitButtonDisabled dijitDisabled" dojoattachevent="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse" widgetid="dijit_form_Button_0" style="display: none; left: 30px; top: 0px; right: auto; bottom: auto; height: 22px;"><span class="dijitReset dijitRight dijitInline"><span class="dijitReset dijitInline dijitButtonNode"><button class="dijitReset dijitStretch dijitButtonContents tnLeftButtonDisabled tnLeftButton" dojoattachpoint="titleNode,focusNode" name="" type="button" wairole="button" waistate="labelledby-dijit_form_Button_0_label" role="button" aria-labelledby="dijit_form_Button_0_label" id="dijit_form_Button_0" disabled="" aria-disabled="true"><span class="dijitReset dijitInline" dojoattachpoint="iconNode"><span class="dijitReset dijitToggleButtonIconChar">✓</span></span><span class="dijitReset dijitInline dijitButtonText" id="dijit_form_Button_0_label" dojoattachpoint="containerNode"></span></button></span></span></span><span class="dijit dijitReset dijitLeft dijitInline tabsRightBtn dijitAlignRight dijitButton dijitButtonDisabled dijitDisabled" dojoattachevent="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse" widgetid="dijit_form_Button_1" style="display: none; left: 653px; top: 0px; right: auto; bottom: auto; height: 22px;"><span class="dijitReset dijitRight dijitInline"><span class="dijitReset dijitInline dijitButtonNode"><button class="dijitReset dijitStretch dijitButtonContents tnRightButtonDisabled tnRightButton" dojoattachpoint="titleNode,focusNode" name="" type="button" wairole="button" waistate="labelledby-dijit_form_Button_1_label" role="button" aria-labelledby="dijit_form_Button_1_label" id="dijit_form_Button_1" disabled="" aria-disabled="true"><span class="dijitReset dijitInline" dojoattachpoint="iconNode"><span class="dijitReset dijitToggleButtonIconChar">✓</span></span><span class="dijitReset dijitInline dijitButtonText" id="dijit_form_Button_1_label" dojoattachpoint="containerNode"></span></button></span></span></span><div dojotype="dijit.layout.LayoutContainer" layoutalign="client" dojoattachpoint="_containerNode" id="dijit_layout_LayoutContainer_0" widgetid="dijit_layout_LayoutContainer_0" class="dijitContainer dijitLayoutContainer dijitAlignClient" style="left: 34px; top: -1px; right: auto; bottom: auto; width: 619px; height: 22px;"><div class="dijitTabContainerTop-tabs" dojoattachpoint="_scrollNode"><div wairole="presentation" dojoattachevent="onclick:onClick,onmouseenter:_onMouse,onmouseleave:_onMouse" role="presentation" widgetid="tableauTabbedNavigation_tab_0" class=" dijitTab dijitTabChecked dijitChecked">
+    <div wairole="presentation" class="dijitTabInnerDiv" dojoattachpoint="innerDiv" role="presentation">
+        <div wairole="presentation" class="dijitTabContent" dojoattachpoint="tabContent" role="presentation">
+	        <span dojoattachpoint="containerNode,focusNode" class="tabLabel" id="tableauTabbedNavigation_tab_0" value="2011 Dropout Rates" tabindex="-1" role="tab" aria-pressed="true">2011 Dropout Rates</span><img class="dijitTabButtonSpacer" src="blank.gif">
+	        <div class="dijitInline closeNode" dojoattachpoint="closeNode" dojoattachevent="onclick:onClickCloseButton" style="display: none;">
+	        	<img src="blank.gif" alt="" dojoattachpoint="closeButtonNode" class="closeImage" dojoattachevent="onmouseenter:_onMouse, onmouseleave:_onMouse" statemodifier="CloseButton" wairole="presentation" role="presentation">
+	            <span dojoattachpoint="closeText" class="closeText">x</span>
+	        </div>
+        </div>
+    </div>
+</div><div wairole="presentation" dojoattachevent="onclick:onClick,onmouseenter:_onMouse,onmouseleave:_onMouse" role="presentation" widgetid="tableauTabbedNavigation_tab_1" class=" dijitTab">
+    <div wairole="presentation" class="dijitTabInnerDiv" dojoattachpoint="innerDiv" role="presentation">
+        <div wairole="presentation" class="dijitTabContent" dojoattachpoint="tabContent" role="presentation">
+	        <span dojoattachpoint="containerNode,focusNode" class="tabLabel" id="tableauTabbedNavigation_tab_1" value="Summary Statistics" tabindex="-1" role="tab" aria-pressed="false">Summary Statistics</span><img class="dijitTabButtonSpacer" src="blank.gif">
+	        <div class="dijitInline closeNode" dojoattachpoint="closeNode" dojoattachevent="onclick:onClickCloseButton" style="display: none;">
+	        	<img src="blank.gif" alt="" dojoattachpoint="closeButtonNode" class="closeImage" dojoattachevent="onmouseenter:_onMouse, onmouseleave:_onMouse" statemodifier="CloseButton" wairole="presentation" role="presentation">
+	            <span dojoattachpoint="closeText" class="closeText">x</span>
+	        </div>
+        </div>
+    </div>
+</div></div></div></div><div style="max-height: 244px; overflow-x: hidden; overflow-y: auto; border: 1px solid rgb(126, 171, 205); background-color: white; display: none;" id="tableau_base_MaxHeightMenu_0" class="tabbedNavigationMenu" widgetid="tableau_base_MaxHeightMenu_0"><table class="dijit dijitMenu dijitReset dijitMenuTable" wairole="menu" dojoattachevent="onkeypress:_onKeyPress" style="border:none;" role="menu"><tbody class="dijitReset" dojoattachpoint="containerNode"><tr class="dijitReset dijitMenuItem" dojoattachpoint="focusNode" wairole="menuitemcheckbox" tabindex="-1" dojoattachevent="onmouseenter:_onHover,onmouseleave:_onUnhover,ondijitclick:_onClick" role="menuitemcheckbox" id="tableau_base_NoFocusMenuItem_0" widgetid="tableau_base_NoFocusMenuItem_0" aria-labelledby="tableau_base_NoFocusMenuItem_0_text"><td class="dijitReset dijitMenuItemLabel" dojoattachpoint="containerNode,labelNode" style="padding:2px 25px 2px 8px;" id="tableau_base_NoFocusMenuItem_0_text">2011 Dropout Rates</td></tr><tr class="dijitReset dijitMenuItem" dojoattachpoint="focusNode" wairole="menuitemcheckbox" tabindex="-1" dojoattachevent="onmouseenter:_onHover,onmouseleave:_onUnhover,ondijitclick:_onClick" role="menuitemcheckbox" id="tableau_base_NoFocusMenuItem_1" widgetid="tableau_base_NoFocusMenuItem_1" aria-labelledby="tableau_base_NoFocusMenuItem_1_text"><td class="dijitReset dijitMenuItemLabel" dojoattachpoint="containerNode,labelNode" style="padding:2px 25px 2px 8px;" id="tableau_base_NoFocusMenuItem_1_text">Summary Statistics</td></tr></tbody></table></div></div>
+  </div><div id="tabViewer" class="wcBody tab-widget" style="visibility: visible;"><div class="wcVizContainer tab-widget" dojoattachpoint="domScroll" style="top: 0px; width: 650px; height: 350px;">
+    <div class="wcVizDisplay lightBackground" style="height: 350px; width: 650px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+    <div class="tab-zone tab-widget" style="z-index: 14; background-color: rgba(255, 255, 255, 0); width: 634px; height: 303px; top: 39px; left: 8px;"><div class="wcHighlight wcHighlightTop" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightBottom" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightLeft" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightRight" style="visibility: hidden;"></div><div class="tab-tiledViewer placeholder tab-widget" style="top: 0px; left: 0px; right: 0px; bottom: 0px;">
+   <div class="tab-clip" style="-webkit-tap-highlight-color: transparent;">
+     <div class="tab-tvTLSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvTRSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvBLSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvBRSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvYLabel tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvLeftAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvRightAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvXLabel tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvBottomAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvTopAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvView tvimagesNS" id="viewlocationmap_-1983717614" style="width: 634px; height: 303px; top: 0px; left: 0px;"><div class="tvScrollContainer tvmodeSelect" style="cursor: pointer; -webkit-tap-highlight-color: transparent; width: 634px; height: 303px; top: 0px; left: 0px;"><div class="tvimagesContainer" style="width: 634px; height: 303px;"><canvas class="tabCanvas tab-widget" width="634" height="303" style="-webkit-font-smoothing: antialiased;"></canvas></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none; -webkit-transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); -webkit-transform: translate3d(0px, 0px, 0px) scale(1, 1);"></div><div class="tvdrag_mask" style="display: none;"></div></div></div><div class="FloatingZoomToolbar" style="display: none;"><div class="buttonZoomOnlyHomeNormal"></div></div></div>
+     <div class="tab-tvTitle tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"></div>
+     <div class="tab-tvCaption tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"></div>
+     <div class="tab-tvScrollX tvimages" style="display: none;"><div class="tvimagesContainer"></div></div>
+     <div class="tab-tvScrollY tvimages" style="display: none;"><div class="tvimagesContainer"></div></div>
+   </div>
+<div class="tab-widget tab-tiledViewerDrill"><button class="tab-button tab-widget tab-tvLevelDrillDown tab-levelDrillingIcon tvDrillDown" iconclass="tvDrillDown" style="-webkit-tap-highlight-color: transparent; border: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button><button class="tab-button tab-widget tab-tvLevelDrillUp tab-levelDrillingIcon tvDrillUp" iconclass="tvDrillUp" style="-webkit-tap-highlight-color: transparent; border: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button></div><div class="tab-widget tab-tiledViewerSort"><button class="tab-button tab-widget tab-tvSortIndicator" style="-webkit-tap-highlight-color: transparent; border: 0px; position: absolute; padding: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button></div></div></div><div class="tab-zone tab-widget" style="z-index: 11; background-color: rgba(255, 255, 255, 0); width: 634px; height: 334px; top: 8px; left: 8px;"><div class="wcHighlight wcHighlightTop" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightBottom" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightLeft" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightRight" style="visibility: hidden;"></div></div><div class="tab-zone tab-widget" style="z-index: 13; background-color: rgba(255, 255, 255, 0); width: 634px; height: 303px; top: 39px; left: 8px;"><div class="wcHighlight wcHighlightTop" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightBottom" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightLeft" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightRight" style="visibility: hidden;"></div></div><div class="tab-zone tab-widget wcLayoutContainer" style="z-index: 12; background-color: rgba(255, 255, 255, 0); border: 1px none rgb(172, 168, 153); width: 634px; height: 303px; top: 39px; left: 8px;"><div class="wcHighlight wcHighlightTop" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightBottom" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightLeft" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightRight" style="visibility: hidden;"></div></div><div class="tab-zone tab-widget" style="z-index: 16; border: 1px none rgb(172, 168, 153); background-color: rgb(255, 255, 255); width: 275px; height: 47px; top: 294px; left: 10px;"><div class="wcHighlight wcHighlightTop" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightBottom" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightLeft" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightRight" style="visibility: hidden;"></div><div class="tabLegendPanel tab-widget" style="position: relative; overflow: hidden; width: 275px; height: 47px;">
+                <div class="tabLegendTitle" style="position: absolute; left: 0px; top: 4px; width: 275px; height: 13px;"><span style="white-space:pre;tab-size:10;-moz-tab-size:10"><div style="text-align: left; font-family: Arial; font-size: 9pt; color: rgb(85, 85, 85); font-weight: bold; text-overflow: ellipsis; overflow: hidden;"><span style="font-family:&#39;Arial&#39;;font-size:9pt;color:#555555;font-weight:bold;">Annual Dropout Rate</span></div></span></div>
+                <canvas class="tabLegendRamp" style="position: absolute; left: 22px; top: 20px; width: 224px; height: 16px; border: 1px solid rgb(172, 168, 153);" width="224" height="16"></canvas>
+                <div class="tabLegendCenterMark" style="position: absolute; visibility: hidden;"></div>
+                <div class="tabLegendMinLabel" style="position: absolute; left: 4px; top: 20px; width: 15px; height: 15px; text-align: left; font-family: Arial; font-size: 8pt; color: rgb(85, 85, 85); white-space: nowrap;">0%</div>
+                <div class="tabLegendMaxLabel" style="position: absolute; left: 249px; top: 20px; width: 21px; height: 15px; text-align: right; font-family: Arial; font-size: 8pt; color: rgb(85, 85, 85); white-space: nowrap;">29%</div>
+            </div></div><div class="tab-zone tab-widget" style="z-index: 18; background-color: rgba(255, 255, 255, 0); width: 144px; height: 205px; top: 132px; left: 491px;"><div class="wcHighlight wcHighlightTop" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightBottom" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightLeft" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightRight" style="visibility: hidden;"></div><div class="tab-tiledViewer placeholder tab-widget" style="top: 0px; left: 0px; right: 0px; bottom: 0px;">
+   <div class="tab-clip" style="-webkit-tap-highlight-color: transparent;">
+     <div class="tab-tvTLSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvTRSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvBLSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; width: 30px; height: 34px; top: 171px; left: 0px;"><canvas width="30" height="34" style="-webkit-font-smoothing: antialiased;"></canvas></div>
+     <div class="tab-tvBRSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvYLabel tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvLeftAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); width: 30px; height: 127px; top: 45px; left: 0px;"><div class="tvimagesContainer" style="width: 30px; height: 127px;"><canvas class="tabCanvas tab-widget" width="30" height="127" style="-webkit-font-smoothing: antialiased;"></canvas></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none; -webkit-transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); -webkit-transform: translate3d(0px, 0px, 0px) scale(1, 1);"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvRightAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvXLabel tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvBottomAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); width: 114px; height: 34px; top: 171px; left: 30px;"><div class="tvimagesContainer" style="width: 114px; height: 34px;"><canvas class="tabCanvas tab-widget" width="114" height="34" style="-webkit-font-smoothing: antialiased;"></canvas></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none; -webkit-transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); -webkit-transform: translate3d(0px, 0px, 0px) scale(1, 1);"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvTopAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvView tvimagesNS" id="viewdropoutsovertime_-1394827806" style="width: 114px; height: 127px; top: 45px; left: 30px;"><div class="tvScrollContainer tvmodeSelect" style="cursor: pointer; -webkit-tap-highlight-color: transparent; width: 114px; height: 127px; top: 0px; left: 0px;"><div class="tvimagesContainer" style="width: 114px; height: 127px;"><canvas class="tabCanvas tab-widget" width="114" height="127" style="-webkit-font-smoothing: antialiased;"></canvas></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none; -webkit-transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); -webkit-transform: translate3d(0px, 0px, 0px) scale(1, 1);"></div><div class="tvdrag_mask" style="display: none;"></div></div></div><div class="FloatingZoomToolbar" style="display: none;"><div class="buttonZoomOnlyHomeNormal"></div></div></div>
+     <div class="tab-tvTitle tvimagesNS" style="-webkit-tap-highlight-color: transparent; width: 143px; height: 45px; top: 0px; left: 0px;"><div class="tab-textRegion tab-widget" style="overflow: hidden; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px;"><div class="tab-textRegion-background" style="position: absolute; width: 143px; height: 45px; border: 1px none rgb(172, 168, 153); background-color: rgb(255, 255, 255);"></div><div class="tab-textRegion-content" style="position: absolute; top: 50%; left: auto; right: auto; bottom: auto; margin-top: -19px; width: 100%;"><span style="white-space:pre-wrap;tab-size:10;-moz-tab-size:10"><div style="text-align:left;"><span style="font-family:&#39;Trebuchet MS&#39;;font-size:12pt;line-height:19px;color:#555555;font-weight:bold;">Dropouts over Time</span></div></span></div></div></div>
+     <div class="tab-tvCaption tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"></div>
+     <div class="tab-tvScrollX tvimages" style="display: none;"><div class="tvimagesContainer"></div></div>
+     <div class="tab-tvScrollY tvimages" style="display: none;"><div class="tvimagesContainer"></div></div>
+   </div>
+<div class="tab-widget tab-tiledViewerDrill"><button class="tab-button tab-widget tab-tvLevelDrillDown tab-levelDrillingIcon tvDrillDown" iconclass="tvDrillDown" style="-webkit-tap-highlight-color: transparent; border: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button><button class="tab-button tab-widget tab-tvLevelDrillUp tab-levelDrillingIcon tvDrillUp" iconclass="tvDrillUp" style="-webkit-tap-highlight-color: transparent; border: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button></div><div class="tab-widget tab-tiledViewerSort"><button class="tab-button tab-widget tab-tvSortIndicator" style="-webkit-tap-highlight-color: transparent; border: 0px; position: absolute; padding: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button></div></div></div><div class="tab-zone tab-widget" style="z-index: 15; width: 634px; height: 23px; top: 8px; left: 8px;"><div class="wcHighlight wcHighlightTop" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightBottom" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightLeft" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightRight" style="visibility: hidden;"></div><div class="tab-textRegion tab-widget" style="overflow: hidden; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px;"><div class="tab-textRegion-background" style="position: absolute; width: 634px; height: 23px; border: 1px none rgb(172, 168, 153);"></div><div class="tab-textRegion-content" style="position: absolute; top: 50%; left: auto; right: auto; bottom: auto; margin-top: -10.5px; width: 100%;"><span style="white-space:pre-wrap;tab-size:10;-moz-tab-size:10"><div style="text-align:left;"><span style="font-family:&#39;Georgia&#39;;font-size:14pt;line-height:21px;color:#000000;">Washington 2011 Dropout Rates</span></div></span></div></div></div><div class="tab-zone tab-widget" style="z-index: 17; background-color: rgba(255, 255, 255, 0); width: 269px; height: 44px; top: 88px; left: 337px;"><div class="wcHighlight wcHighlightTop" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightBottom" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightLeft" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightRight" style="visibility: hidden;"></div><div class="tab-tiledViewer placeholder tab-widget" style="top: 0px; left: 0px; right: 0px; bottom: 0px;">
+   <div class="tab-clip" style="-webkit-tap-highlight-color: transparent;">
+     <div class="tab-tvTLSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvTRSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvBLSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvBRSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvYLabel tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); width: 128px; height: 44px; top: 0px; left: 0px;"><div class="tvimagesContainer" style="width: 128px; height: 44px;"><canvas class="tabCanvas tab-widget" width="128" height="44" style="-webkit-font-smoothing: antialiased;"></canvas></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none; -webkit-transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); -webkit-transform: translate3d(0px, 0px, 0px) scale(1, 1);"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvLeftAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvRightAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvXLabel tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvBottomAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvTopAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvView tvimagesNS" id="viewgiantnumber_555145254" style="width: 141px; height: 44px; top: 0px; left: 128px;"><div class="tvScrollContainer tvmodeSelect" style="cursor: pointer; -webkit-tap-highlight-color: transparent; width: 141px; height: 44px; top: 0px; left: 0px;"><div class="tvimagesContainer" style="width: 141px; height: 44px;"><canvas class="tabCanvas tab-widget" width="141" height="44" style="-webkit-font-smoothing: antialiased;"></canvas></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none; -webkit-transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); -webkit-transform: translate3d(0px, 0px, 0px) scale(1, 1);"></div><div class="tvdrag_mask" style="display: none;"></div></div></div><div class="FloatingZoomToolbar" style="display: none;"><div class="buttonZoomOnlyHomeNormal"></div></div></div>
+     <div class="tab-tvTitle tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"></div>
+     <div class="tab-tvCaption tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"></div>
+     <div class="tab-tvScrollX tvimages" style="display: none;"><div class="tvimagesContainer"></div></div>
+     <div class="tab-tvScrollY tvimages" style="display: none;"><div class="tvimagesContainer"></div></div>
+   </div>
+<div class="tab-widget tab-tiledViewerDrill"><button class="tab-button tab-widget tab-tvLevelDrillDown tab-levelDrillingIcon tvDrillDown" iconclass="tvDrillDown" style="-webkit-tap-highlight-color: transparent; border: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button><button class="tab-button tab-widget tab-tvLevelDrillUp tab-levelDrillingIcon tvDrillUp" iconclass="tvDrillUp" style="-webkit-tap-highlight-color: transparent; border: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button></div><div class="tab-widget tab-tiledViewerSort"><button class="tab-button tab-widget tab-tvSortIndicator" style="-webkit-tap-highlight-color: transparent; border: 0px; position: absolute; padding: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button></div></div></div><div class="tab-zone tab-widget" style="z-index: 19; background-color: rgba(255, 255, 255, 0); width: 245px; height: 43px; top: 46px; left: 337px;"><div class="wcHighlight wcHighlightTop" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightBottom" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightLeft" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightRight" style="visibility: hidden;"></div><div class="tab-tiledViewer placeholder tab-widget" style="top: 0px; left: 0px; right: 0px; bottom: 0px;">
+   <div class="tab-clip" style="-webkit-tap-highlight-color: transparent;">
+     <div class="tab-tvTLSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvTRSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvBLSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvBRSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvYLabel tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvLeftAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvRightAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvXLabel tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvBottomAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvTopAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvView tvimagesNS" id="viewcountyname_1670093039" style="width: 245px; height: 43px; top: 0px; left: 0px;"><div class="tvScrollContainer tvmodeSelect" style="cursor: pointer; -webkit-tap-highlight-color: transparent; width: 245px; height: 43px; top: 0px; left: 0px;"><div class="tvimagesContainer" style="width: 245px; height: 43px;"><canvas class="tabCanvas tab-widget" width="245" height="43" style="-webkit-font-smoothing: antialiased;"></canvas></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none; -webkit-transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); -webkit-transform: translate3d(0px, 0px, 0px) scale(1, 1);"></div><div class="tvdrag_mask" style="display: none;"></div></div></div><div class="FloatingZoomToolbar" style="display: none;"><div class="buttonZoomOnlyHomeNormal"></div></div></div>
+     <div class="tab-tvTitle tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"></div>
+     <div class="tab-tvCaption tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"></div>
+     <div class="tab-tvScrollX tvimages" style="display: none;"><div class="tvimagesContainer"></div></div>
+     <div class="tab-tvScrollY tvimages" style="display: none;"><div class="tvimagesContainer"></div></div>
+   </div>
+<div class="tab-widget tab-tiledViewerDrill"><button class="tab-button tab-widget tab-tvLevelDrillDown tab-levelDrillingIcon tvDrillDown" iconclass="tvDrillDown" style="-webkit-tap-highlight-color: transparent; border: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button><button class="tab-button tab-widget tab-tvLevelDrillUp tab-levelDrillingIcon tvDrillUp" iconclass="tvDrillUp" style="-webkit-tap-highlight-color: transparent; border: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button></div><div class="tab-widget tab-tiledViewerSort"><button class="tab-button tab-widget tab-tvSortIndicator" style="-webkit-tap-highlight-color: transparent; border: 0px; position: absolute; padding: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button></div></div></div><div class="tab-zone tab-widget" style="z-index: 20; background-color: rgba(255, 255, 255, 0); width: 165px; height: 205px; top: 131px; left: 325px;"><div class="wcHighlight wcHighlightTop" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightBottom" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightLeft" style="visibility: hidden;"></div><div class="wcHighlight wcHighlightRight" style="visibility: hidden;"></div><div class="tab-tiledViewer placeholder tab-widget" style="top: 0px; left: 0px; right: 0px; bottom: 0px;">
+   <div class="tab-clip" style="-webkit-tap-highlight-color: transparent;">
+     <div class="tab-tvTLSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvTRSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvBLSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; width: 60px; height: 30px; top: 175px; left: 0px;"><canvas width="60" height="30" style="-webkit-font-smoothing: antialiased;"></canvas></div>
+     <div class="tab-tvBRSpacer tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"><img></div>
+     <div class="tab-tvYLabel tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); width: 60px; height: 176px; top: 0px; left: 0px;"><div class="tvimagesContainer" style="width: 60px; height: 176px;"><canvas class="tabCanvas tab-widget" width="60" height="176" style="-webkit-font-smoothing: antialiased;"></canvas></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none; -webkit-transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); -webkit-transform: translate3d(0px, 0px, 0px) scale(1, 1);"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvLeftAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvRightAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvXLabel tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvBottomAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); width: 105px; height: 30px; top: 175px; left: 60px;"><div class="tvimagesContainer" style="width: 105px; height: 30px;"><canvas class="tabCanvas tab-widget" width="105" height="30" style="-webkit-font-smoothing: antialiased;"></canvas></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none; -webkit-transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); -webkit-transform: translate3d(0px, 0px, 0px) scale(1, 1);"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvTopAxis tvimagesNS" style="cursor: pointer; -webkit-tap-highlight-color: transparent; background-color: rgb(255, 255, 255); display: none;"><div class="tvimagesContainer"></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none;"></div><div class="tvdrag_mask" style="display: none;"></div></div></div>
+     <div class="tab-tvView tvimagesNS" id="viewdropoutrates_-575443560" style="width: 105px; height: 176px; top: 0px; left: 60px;"><div class="tvScrollContainer tvmodeSelect" style="cursor: pointer; -webkit-tap-highlight-color: transparent; width: 105px; height: 176px; top: 0px; left: 0px;"><div class="tvimagesContainer" style="width: 105px; height: 176px;"><canvas class="tabCanvas tab-widget" width="105" height="176" style="-webkit-font-smoothing: antialiased;"></canvas></div><div class="tvdrag" style="display: none;"><div class="tvdrag_image" style="display: none; -webkit-transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); transition: -webkit-transform 0ms cubic-bezier(0, 0, 0.25, 1); -webkit-transform: translate3d(0px, 0px, 0px) scale(1, 1);"></div><div class="tvdrag_mask" style="display: none;"></div></div></div><div class="FloatingZoomToolbar" style="display: none;"><div class="buttonZoomOnlyHomeNormal"></div></div></div>
+     <div class="tab-tvTitle tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"></div>
+     <div class="tab-tvCaption tvimagesNS" style="-webkit-tap-highlight-color: transparent; display: none;"></div>
+     <div class="tab-tvScrollX tvimages" style="display: none;"><div class="tvimagesContainer"></div></div>
+     <div class="tab-tvScrollY tvimages" style="display: none;"><div class="tvimagesContainer"></div></div>
+   </div>
+<div class="tab-widget tab-tiledViewerDrill"><button class="tab-button tab-widget tab-tvLevelDrillDown tab-levelDrillingIcon tvDrillDown" iconclass="tvDrillDown" style="-webkit-tap-highlight-color: transparent; border: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button><button class="tab-button tab-widget tab-tvLevelDrillUp tab-levelDrillingIcon tvDrillUp" iconclass="tvDrillUp" style="-webkit-tap-highlight-color: transparent; border: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button></div><div class="tab-widget tab-tiledViewerSort"><button class="tab-button tab-widget tab-tvSortIndicator" style="-webkit-tap-highlight-color: transparent; border: 0px; position: absolute; padding: 0px; display: none;"><span class="icon"></span><span class="label hide"></span></button></div></div></div></div>
+</div><div class="wcVizPlaceholder" dojoattachpoint="domPlaceholder" style="width: 650px; height: 350px;"></div><div class="dijitDialog dijitContentPane" id="share_dialog" widgetid="share_dialog" title="" role="group" style="visibility: hidden; position: absolute; top: -9999px; display: none;"><div dojoattachpoint="titleBar" class="dijitDialogTitleBar"><span dojoattachpoint="titleNode" class="dijitDialogTitle" id="share_dialog_title"></span><span dojoattachpoint="closeButtonNode" class="dijitDialogCloseIcon" dojoattachevent="onclick: onCancel" title="Cancel"><span dojoattachpoint="closeText" class="closeText" title="Cancel">x</span></span></div><div dojoattachpoint="containerNode" class="dijitDialogPaneContent"><div class="shareVizTable"><div class="shareVizHeader"><span class="shareVizTitle">Share View</span><a class="shareVizHeaderLink" href="http://public.tableausoftware.com/" id="share_header_link" tabindex="-1" target="_blank"><img id="share_header_logo"> </a></div><table class="shareInnerTable"><tbody><tr><td align="right"><div class="displayOptions"><span id="displayOptionsHeader" class="closed" href="/" onclick="tab.ShareDialogUtil.showPopup(); return false;" onfocus="blur();" tabindex="-1"></span><span id="superimposedText" class="closed" href="/" onclick="tab.ShareDialogUtil.showPopup(); return false;">Display Options</span><div id="optionsPopup"><form action="" id="optionsPopupForm" class="selectShareVizOptions"><fieldset style="border:none; margin:0; padding:5px;"><table width="135" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><label for="share_width">Width:</label></td><td><input id="share_width" size="5" class="" type="text" name="share_width" title="width" value="425" alt="width" constraints="{min:1,max:9999,places:0,pattern:&#39;###0.##&#39;}" promptmessage="Enter a value between 1 and 10000" required="true" tooltipposition="[&#39;TL&#39;:&#39;BL&#39;]" invalidmessage="Invalid width." onkeyup="tab.ShareDialogUtil.validateReasonableDimension(&#39;share_width&#39;, false);" onblur="tab.ShareDialogUtil.validateReasonableDimension(&#39;share_width&#39;, true);"></td></tr><tr><td><label for="share_height">Height:</label></td><td><input id="share_height" size="5" class="" type="height" name="share_height" title="height" value="350" alt="height" constraints="{min:1,max:9999,places:0,pattern:&#39;###0.##&#39;}" promptmessage="Enter a value between 1 and 10000" required="true" tooltipposition="[&#39;TL&#39;:&#39;BL&#39;]" invalidmessage="Invalid height." onkeyup="tab.ShareDialogUtil.validateReasonableDimension(&#39;share_height&#39;, false);" onblur="tab.ShareDialogUtil.validateReasonableDimension(&#39;share_height&#39;, true);"></td></tr><tr id="shareShowToolbar"><td colspan="2"><label for="share_toolbar" id="share_toolbar_label" class="">Show Toolbar</label><input type="checkbox" id="share_toolbar" name="share_toolbar" class="" value="" alt="Show Toolbar" onclick="tab.ShareDialogUtil.doUpdateGenerated();"></td></tr><tr id="shareShowTabs"><td colspan="2" style="padding-bottom:10px;"><label id="show_tabs_label" for="show_tabs" class="">Show Tabs</label><input type="checkbox" id="show_tabs" name="show_tabs" class="" value="" alt="Show Tabs" onclick="tab.ShareDialogUtil.doUpdateGenerated();"></td></tr><tr id="share_rss_blog_row"><td colspan="2"><label style="font-family:Arial, Helvetica, sans-serif; font-weight:normal;" for="share_blog">URL for RSS links:</label><br><input style="outline:none; margin-bottom:0; width:119px;  font-weight:normal;" id="share_blog" class="" type="text" name="share_blog" title="URL for RSS links:" value="" alt="URL for RSS links:" promptmessage="Enter the URI for the blog entry" required="optional" maxlength="255" onblur="tab.ShareDialogUtil.doUpdateGenerated();"></td></tr></tbody></table></fieldset></form></div></div></td></tr><tr class="share_mobile_only" style="display:none"><td><div class="shareVizOption">Link:</div><table class="shareVizHelpText"><tbody><tr><td><a href="mailto:" id="share_mailto_a" class="tableau wcIconMail"></a></td><td>Tap icon to send the link by email</td></tr><tr><td><a target="_blank" id="share_link_a" class="tableau wcIconLink"></a></td><td>Tap and hold icon to access other sharing options</td></tr></tbody></table></td></tr><tr class="share_web_only"><td><span class="shareVizOption">Email:</span><br><span class="shareVizHelpText">Copy and Paste link into your email message</span><br><input id="share_link_textbox" class="emailVizURL" readonly="readonly" onclick="this.focus();this.select();return false;"></td></tr><tr><td><span class="shareVizOption">Embed:</span><br><span class="shareVizHelpText">Copy and Paste HTML code to embed the view in your website</span><br><input id="share_embed_textbox" class="embedViz" readonly="readonly" onclick="this.focus();this.select();return false;"></td></tr><tr><td><div style="white-space: nowrap;"><button class="tab-styledButton" onclick="tab.ShareDialogUtil.hideShareDialog(); return false;"><span class="tab-styledButtonLeft"></span><span class="tab-styledButtonMiddle">Done</span><span class="tab-styledButtonRight"></span></button><span id="dimension_warning" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; font-weight:normal; visibility:hidden; color:red; margin-left:10px;">Please enter an integer between 1 and 10000</span></div></td></tr></tbody></table></div><!-- end shareVizTable --></div></div><div class="bottom_toolbar tab-toolbar-container" style="visibility: visible;"><div class="tab-fill tab-toolbar" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); max-width: 650px;"><span class="tab-fill-left"><a class="tab-toolbar-button tab-widget tab-enabled tab-toolbar-text-button wcShareButton tab-toolbar-share-text-button-public"><span class="tab-toolbar-button-left-icon tab-icon-share"></span><span class="tab-toolbar-button-text">Share</span></a><a class="tab-toolbar-button tab-widget tab-enabled tab-icon-public"><span class="tab-toolbar-button-icon tab-icon-facebook"></span></a><a class="tab-toolbar-button tab-widget tab-enabled tab-icon-public"><span class="tab-toolbar-button-icon tab-icon-twitter"></span></a><a class="tab-toolbar-button tab-widget tab-enabled tab-icon-public"><span class="tab-toolbar-button-icon tab-icon-mail"></span></a><a class="tab-toolbar-button tab-widget tab-enabled wcShareButton tab-icon-public"><span class="tab-toolbar-button-icon tab-icon-link"></span></a></span><span class="tab-inline-block" style="position: static;"><a class="tab-toolbar-button tab-widget tab-enabled" title="Export"><span class="tab-toolbar-button-icon tab-icon-export"></span></a><a class="tab-toolbar-button tab-widget tab-enabled" title="Revert All"><span class="tab-toolbar-button-icon tab-icon-revert"></span></a><a class="tab-toolbar-button tab-widget tab-enabled" title="Pause Automatic Updates" style="display: none;"><span class="tab-toolbar-button-icon tab-icon-autoupdate-on"></span></a><a class="tab-toolbar-button tab-widget tab-enabled" title="Refresh data for this view" style="display: none;"><span class="tab-toolbar-button-icon tab-icon-refresh"></span></a></span><span class="tab-fill-right"></span></div></div><div class="wcWatermark" style="display: block; width: 650px;"><div class="wcPublicNote" dojoattachpoint="domPublicNote">
+          <span id="domViewCount"></span>
+          <span id="interpunct" style="display:none">&nbsp;·&nbsp;</span>
+          <span id="domSharePerspective" style="">Share your perspective</span></div><div><a id="domWatermarkLink" target="_blank" href="http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/STeducationdemo_small/2011DropoutRates"><img dojoattachpoint="domWatermarkImage" alt="Tableau Public" border="0" src="watermark.png"></a></div><div class="wcAuthorByline" style="left: 175px;"><span><a target="_blank" href="http://public.tableausoftware.com/profile/rdr/repo?workbook=STeducationdemo_small">See more by this author</a></span></div></div></div>
+<div id="tabViewer"></div>
+  <script type="text/javascript">
+  //<![CDATA[
+   // ViewerBootstrap.js
+(function(){var ss={version:'0.7.4.0',isUndefined:function(o){return(o===undefined);},isNull:function(o){return(o===null);},isNullOrUndefined:function(o){return(o===null)||(o===undefined);},isValue:function(o){return(o!==null)&&(o!==undefined);}};var Type=Function;var originalRegistrationFunctions={registerNamespace:{isPrototype:false,func:Type.registerNamespace},registerInterface:{isPrototype:true,func:Type.prototype.registerInterface},registerClass:{isPrototype:true,func:Type.prototype.registerClass},registerEnum:{isPrototype:true,func:Type.prototype.registerEnum}};var tab=window.tab||{};var tabBootstrap=window.tabBootstrap||{};window.tab=tab;window.tabBootstrap=tabBootstrap;Type.registerNamespace=function(name){if(name==="tableauSoftware"){window.tableauSoftware=window.tableauSoftware||{};}};Type.prototype.registerInterface=function(name){};Type.prototype.registerEnum=function(name,flags){for(var field in this.prototype){this[field]=this.prototype[field];}};Type.prototype.registerClass=function(name,baseType,interfaceType){var that=this;this.prototype.constructor=this;this.__baseType=baseType||Object;if(baseType){this.__basePrototypePending=true;this.__setupBase=function(){Type$setupBase(that);};this.initializeBase=function(instance,args){Type$initializeBase(that,instance,args);};this.callBaseMethod=function(instance,name,args){Type$callBaseMethod(that,instance,name,args);};}};function Type$setupBase(that){if(that.__basePrototypePending){var baseType=that.__baseType;if(baseType.__basePrototypePending){baseType.__setupBase();} for(var memberName in baseType.prototype){var memberValue=baseType.prototype[memberName];if(!that.prototype[memberName]){that.prototype[memberName]=memberValue;}} delete that.__basePrototypePending;delete that.__setupBase;}}
+function Type$initializeBase(that,instance,args){if(that.__basePrototypePending){that.__setupBase();} if(!args){that.__baseType.apply(instance);} else{that.__baseType.apply(instance,args);}}
+function Type$callBaseMethod(that,instance,name,args){var baseMethod=that.__baseType.prototype[name];if(!args){return baseMethod.apply(instance);} else{return baseMethod.apply(instance,args);}}function restoreTypeSystem(){for(var regFuncName in originalRegistrationFunctions){if(!originalRegistrationFunctions.hasOwnProperty(regFuncName)){continue;} var original=originalRegistrationFunctions[regFuncName];var typeOrPrototype=original.isPrototype?Type.prototype:Type;if(original.func){typeOrPrototype[regFuncName]=original.func;} else{delete typeOrPrototype[regFuncName];}}}
+ss.Delegate=function Delegate$(){};ss.Delegate.registerClass('Delegate');ss.Delegate.empty=function(){};ss.Delegate._contains=function Delegate$_contains(targets,object,method){for(var i=0;i<targets.length;i+=2){if(targets[i]===object&&targets[i+1]===method){return true;}} return false;};ss.Delegate._create=function Delegate$_create(targets){var delegate=function(){if(targets.length==2){return targets[1].apply(targets[0],arguments);} else{var clone=targets.concat();for(var i=0;i<clone.length;i+=2){if(ss.Delegate._contains(targets,clone[i],clone[i+1])){clone[i+1].apply(clone[i],arguments);}} return null;}};delegate._targets=targets;return delegate;};ss.Delegate.create=function Delegate$create(object,method){if(!object){return method;} return ss.Delegate._create([object,method]);};ss.Delegate.combine=function Delegate$combine(delegate1,delegate2){if(!delegate1){if(!delegate2._targets){return ss.Delegate.create(null,delegate2);} return delegate2;} if(!delegate2){if(!delegate1._targets){return ss.Delegate.create(null,delegate1);} return delegate1;} var targets1=delegate1._targets?delegate1._targets:[null,delegate1];var targets2=delegate2._targets?delegate2._targets:[null,delegate2];return ss.Delegate._create(targets1.concat(targets2));};ss.Delegate.remove=function Delegate$remove(delegate1,delegate2){if(!delegate1||(delegate1===delegate2)){return null;} if(!delegate2){return delegate1;} var targets=delegate1._targets;var object=null;var method;if(delegate2._targets){object=delegate2._targets[0];method=delegate2._targets[1];} else{method=delegate2;} for(var i=0;i<targets.length;i+=2){if((targets[i]===object)&&(targets[i+1]===method)){if(targets.length==2){return null;} targets.splice(i,2);return ss.Delegate._create(targets);}} return delegate1;};ss.IEnumerator=function IEnumerator$(){};ss.IEnumerator.prototype={get_current:null,moveNext:null,reset:null};ss.IEnumerator.getEnumerator=function ss_IEnumerator$getEnumerator(enumerable){if(enumerable){return enumerable.getEnumerator?enumerable.getEnumerator():new ss.ArrayEnumerator(enumerable);} return null;}
+ss.IEnumerable=function IEnumerable$(){};ss.IEnumerable.prototype={getEnumerator:null};ss.ArrayEnumerator=function ArrayEnumerator$(array){this._array=array;this._index=-1;this.current=null;}
+ss.ArrayEnumerator.prototype={moveNext:function ArrayEnumerator$moveNext(){this._index++;this.current=this._array[this._index];return(this._index<this._array.length);},reset:function ArrayEnumerator$reset(){this._index=-1;this.current=null;}};ss.IDisposable=function IDisposable$(){};ss.IDisposable.prototype={dispose:null};ss.StringBuilder=function StringBuilder$(s){this._parts=!ss.isNullOrUndefined(s)?[s]:[];this.isEmpty=this._parts.length==0;}
+ss.StringBuilder.prototype={append:function StringBuilder$append(s){if(!ss.isNullOrUndefined(s)){this._parts.push(s);this.isEmpty=false;} return this;},appendLine:function StringBuilder$appendLine(s){this.append(s);this.append('\r\n');this.isEmpty=false;return this;},clear:function StringBuilder$clear(){this._parts=[];this.isEmpty=true;},toString:function StringBuilder$toString(s){return this._parts.join(s||'');}};ss.StringBuilder.registerClass('StringBuilder');ss.EventArgs=function EventArgs$(){}
+ss.EventArgs.registerClass('EventArgs');ss.EventArgs.Empty=new ss.EventArgs();ss.CancelEventArgs=function CancelEventArgs$(){ss.CancelEventArgs.initializeBase(this);this.cancel=false;}
+ss.CancelEventArgs.registerClass('CancelEventArgs',ss.EventArgs);ss.Tuple=function(first,second,third){this.first=first;this.second=second;if(arguments.length==3){this.third=third;}}
+ss.Tuple.registerClass('Tuple');
+Type.registerNamespace('tabBootstrap');tabBootstrap.UIMetricType=function(){};tabBootstrap.UIMetricType.prototype = {scrollbar:'scrollbar',qfixed:'qfixed',qslider:'qslider',qreadout:'qreadout',cfixed:'cfixed',citem:'citem',hfixed:'hfixed',hitem:'hitem',cmslider:'cmslider',cmdropdown:'cmdropdown',cmpattern:'cmpattern',rdate:'rdate',rdatep:'rdatep',capply:'capply',cmtypeinsearch:'cmtypeinsearch',ccustomitem:'ccustomitem'}
+tabBootstrap.UIMetricType.registerEnum('tabBootstrap.UIMetricType',false);tabBootstrap.$create_Metric=function(w,h){var $o={};$o.w=w;$o.h=h;return $o;}
+tabBootstrap.BaseUrlFormatter=function(){}
+tabBootstrap.BaseUrlFormatter.formatBaseUrl=function(){return window.location.protocol+'//'+window.location.host;}
+tabBootstrap.BaseUrlFormatter.formatUrlRoot=function(baseUrl,prefix){var $0=baseUrl;if(prefix!=null){$0+=prefix;}else if(ss.isValue(tsConfig.vizql_root)){$0+=tsConfig.vizql_root;}else{var $1=window.location.pathname;$1=$1.replace(new RegExp('\\/[^\\/]*$'),'');$0+=$1;}return $0;}
+tabBootstrap.BaseUrlFormatter.formatSessionMethod=function(method,id,urlRoot){var $0=new ss.StringBuilder();$0.append(urlRoot);$0.append('/');$0.append(method);$0.append('/sessions/');$0.append(id);return $0.toString();}
+tabBootstrap.Utility=function(){}
+tabBootstrap.Utility.get_$7=function(){if(!tsConfig.is_mobile_device||tsConfig.embedded){return false;}var $0=(window.navigator.userAgent.indexOf('Android')!==-1);if($0){return false;}var $1=(window.navigator.userAgent.indexOf('Safari')!==-1)&&(window.navigator.userAgent.indexOf('OS 7')!==-1);return $1;}
+tabBootstrap.Utility.xhrPostJsonChunked=function(uri,param,firstChunkCallback,secondaryChunkCallback,errBack,asynchronous){var $0=tabBootstrap.Utility.$C();$0.open('POST',uri,asynchronous);$0.setRequestHeader('Accept','text/javascript');$0.setRequestHeader('Content-Type','application/x-www-form-urlencoded');if(!ss.isNullOrUndefined(tsConfig.sheetId)){$0.setRequestHeader('X-Tsi-Active-Tab',tsConfig.sheetId);}var $1=tabBootstrap.Utility.$15($0,errBack);var $2=0;var $3=function(){
+var $1_0='';try{$1_0=$0.responseText;}catch($1_2){}var $1_1=$1_0.length;while($2<$1_1){var $1_3=$1_0.substr($2);var $1_4=new RegExp('^(\\d+);');var $1_5=$1_3.match($1_4);if(!ss.isValue($1_5)){return;}var $1_6=$1_5[0].length;var $1_7=parseInt($1_5[1]);if($1_6+$1_7>$1_3.length){return;}$1_3=$1_3.substr($1_6,$1_7);var $1_8=null;try{$1_8=tabBootstrap.Utility.$B($1_3);}catch($1_9){$1(new Error('Invalid JSON'));}if(!$2){firstChunkCallback($1_8);}else{secondaryChunkCallback($1_8);}$2+=$1_6+$1_7;}};var $4=-1;var $5=false;var $6=(window.navigator.userAgent.indexOf('MSIE')>=0&&parseFloat(window.navigator.appVersion.split('MSIE ')[1])<10);$0.onreadystatechange=function(){
+if(!$6&&$0.readyState===3&&$0.status===200&&!$5){$3();if($4===-1){$4=window.setInterval($3,25);}$5=true;return;}if($0.readyState!==4){return;}if($4!==-1){window.clearInterval($4);$4=-1;}if(tabBootstrap.Utility.$13($0)){$3();}else{$1(new Error('Unable to load '+uri+'; status: '+$0.status));}};try{$0.send(param);}catch($7){$1($7);}}
+tabBootstrap.Utility.xhrGetXmlSynchronous=function(uri,errBack){var $0=tabBootstrap.Utility.$C();$0.open('GET',uri,false);$0.setRequestHeader('Accept','text/xml');try{$0.send();}catch($1){tabBootstrap.Utility.$14($0,errBack,$1);return null;}return $0.responseText;}
+tabBootstrap.Utility.xhrPostJson=function(uri,param,callback,errBack,asynchronous){var $0=tabBootstrap.Utility.$C();$0.open('POST',uri,asynchronous);$0.setRequestHeader('Accept','text/javascript');$0.setRequestHeader('Content-Type','application/x-www-form-urlencoded');if(ss.isValue(tsConfig.sheetId)){$0.setRequestHeader('X-Tsi-Active-Tab',tsConfig.sheetId);}var $1=tabBootstrap.Utility.$15($0,errBack);$0.onreadystatechange=function(){
+if($0.readyState!==4){return;}if(tabBootstrap.Utility.$13($0)){try{var $1_0=tabBootstrap.Utility.$B($0.responseText);callback($1_0);}catch($1_1){$1($1_1);}}else{$1(new Error('Unable to load '+uri+'; status: '+$0.status));}};try{$0.send(param);}catch($2){$1($2);}}
+tabBootstrap.Utility.applySafari7CSSHackFix=function(){if(tabBootstrap.Utility.get_$7()){var $0=tabBootstrap.Utility.$E();var $1=$0.orientation;if($1===90||$1===-90){window.document.body.style.height=window.innerHeight+'px';}else{window.document.body.style.height='';}}}
+tabBootstrap.Utility.$8=function($p0,$p1){if(ss.isValue($p0)){var $0=$p0[$p1];if(ss.isValue($0)){return !!$0;}}return false;}
+tabBootstrap.Utility.$9=function($p0,$p1){if(ss.isValue($p0)){var $0=$p0[$p1];if(ss.isValue($0)){return parseInt($0,10);}}return 0;}
+tabBootstrap.Utility.$A=function($p0){if(ss.isNullOrUndefined($p0)){return '';}var $0=false;$0 = String.prototype.trim;if($0){var $1=null;$1 = String.prototype.trim.call($p0);return $1;}else{return $p0.replace(tabBootstrap.Utility.$1,'').replace(tabBootstrap.Utility.$2,'');}}
+tabBootstrap.Utility.$B=function($p0){if(ss.isNullOrUndefined($p0)||typeof($p0)!=='string'){return null;}$p0=tabBootstrap.Utility.$A($p0);if(tabBootstrap.Utility.$3.test(($p0).replace(tabBootstrap.Utility.$4,'@').replace(tabBootstrap.Utility.$5,']').replace(tabBootstrap.Utility.$6,''))){var $0=null;$0 = window.JSON && window.JSON.parse ? window.JSON.parse($p0) : (new Function('return ' + $p0))();return $0;}else{throw new Error('Invalid JSON: '+$p0);}}
+tabBootstrap.Utility.$C=function(){try{return new XMLHttpRequest();}catch($0){}try{return new ActiveXObject('Microsoft.XMLHTTP');}catch($1){}throw new Error('XMLHttpRequest not supported');}
+tabBootstrap.Utility.$D=function(){var $0=window.document.documentElement;return tabBootstrap.$create_Metric($0.clientWidth,$0.clientHeight);}
+tabBootstrap.Utility.$E=function(){var $0=window.self;while(ss.isValue($0.parent)&&$0.parent!==$0){$0=$0.parent;}return $0;}
+tabBootstrap.Utility.$F=function(){var $0,$1;var $2=window.document.documentElement.clientWidth;var $3=window.document.documentElement.clientHeight;var $4=(window.navigator.userAgent.indexOf('Android')!==-1);var $5=tabBootstrap.Utility.$E();var $6=$5.orientation;if($4){if($2===window.screen.height){$1=window.screen.width-$3;$0=$2-$1;$2=$3+$1;$3=$0;}}else if(ss.isValue($6)&&($6===90||$6===-90)){if(tabBootstrap.Utility.get_$7()){var $7=window.innerHeight;if($7<$3){$3=$7;}}if($2===window.screen.width){$1=window.screen.height-$3;$0=$2-$1;$2=$3+$1;$3=$0;}}else{if($2===window.screen.height){$1=window.screen.width-$3;$0=$2-$1;$2=$3+$1;$3=$0;}}return tabBootstrap.$create_Metric($2,$3);}
+tabBootstrap.Utility.$10=function(){var $0=document.createElement('canvas');if(ss.isNullOrUndefined($0)||ss.isNullOrUndefined($0.getContext)){return false;}var $1=$0.getContext('2d');return typeof $1.fillText === 'function';}
+tabBootstrap.Utility.$11=function(){var $0=true;try{$0=window.self!==window.parent&&ss.isNullOrUndefined(window.parent.location.hostname);}catch($3){}var $1=($0)?window.self:window.parent;var $2=$1.location.hash;return (!$2.length)?'':$2.substring(1,$2.length);}
+tabBootstrap.Utility.$12=function(){var $0=1;if(ss.isValue(tsConfig.highDpi)&&tsConfig.highDpi){if(ss.isValue(tsConfig.pixelRatio)){$0=tsConfig.pixelRatio;}else{$0=(window.self.devicePixelRatio||1);}}return $0;}
+tabBootstrap.Utility.$13=function($p0){var $0=(ss.isValue($p0.status))?$p0.status:0;if(($0>=200&&$0<300)||$0===304||$0===1223||(0===$0&&(window.location.protocol==='file:'||window.location.protocol==='chrome:'))){return true;}return false;}
+tabBootstrap.Utility.$14=function($p0,$p1,$p2){if($p1==null){return;}var $0=tabBootstrap.Utility.$15($p0,$p1);$0($p2);}
+tabBootstrap.Utility.$15=function($p0,$p1){return function($p1_0){
+$p1_0.status=$p0.status;$p1_0.responseText=$p0.responseText;$p1($p1_0);};}
+tabBootstrap.ViewerBootstrap=function(){if(!tsConfig.isPublic&&!tsConfig.toolbarvis){tsConfig.blogURI='';tsConfig.downloadURI='';}var $0=tsConfig.gbrand||(tsConfig.downloadURI).length>0;this.toolbarDisplayed=($0||tsConfig.toolbarContainerVis);this.ts=new Date().getTime();this.rid=0;if(tsConfig.single_frame){this.location=window.location;}else{this.location=window.parent.location;}tabBootstrap.Utility.applySafari7CSSHackFix();this.setupClearSessionOnBrowserUnload();}
+tabBootstrap.ViewerBootstrap.get_instance=function(){return (tabBootstrap.ViewerBootstrap._instance=tabBootstrap.ViewerBootstrap._instance||new tabBootstrap.ViewerBootstrap());}
+tabBootstrap.ViewerBootstrap.makeOneTimeListener=function($p0){var $0=false;return function($p1_0){
+if($0){return;}$0=true;$p0($p1_0);};}
+tabBootstrap.ViewerBootstrap.makeOneTimeHandler=function($p0){var $0=false;return function(){
+if($0){return;}$0=true;$p0(null);};}
+tabBootstrap.ViewerBootstrap.prototype={toolbarHeight:27,watermarkHeight:33,location:null,toolbarDisplayed:false,rid:0,ts:0,metricsUsedForInitialLayout:null,clearSessionOnUnload:false,hasBootstrapCompleted:false,initialLayoutModel:null,initialLayoutError:null,secondaryResponses:null,requestingBootstrapData:false,_onSuccess:null,_onError:null,get_hasBootstrapCompleted:function(){return this.hasBootstrapCompleted;},get_tabsHeight:function(){if(tsConfig.is_authoring){return 0;}return ((this.shouldShowTabs())?23:0);},get_authoringTabsHeight:function(){return (tsConfig.is_authoring)?30:0;},get_authoringToolbarHeight:function(){return (tsConfig.is_authoring)?(tsConfig.is_mobile)?44:46:0;},get_authoringMastheadHeight:function(){return (tsConfig.is_authoring)?(tsConfig.is_mobile_app)?0:(tsConfig.is_mobile)?32:50:0;},get_authoringInitialLeftAreaWidth:function(){return (tsConfig.is_authoring&&!tsConfig.is_mobile)?170:0;},get_authoringShelfWidth:function(){return (tsConfig.is_authoring)?(tsConfig.is_mobile)?50:185+5:0;},get_authoringShelfHeight:function(){return (tsConfig.is_authoring)?(tsConfig.is_mobile)?0:67:0;},setupClearSessionOnBrowserUnload:function(){this.clearSessionOnUnload=tsConfig.clear_session_on_unload;if(!this.clearSessionOnUnload){return;}if(ss.isValue(window.self.addEventListener)){window.addEventListener('beforeunload',ss.Delegate.create(this,function(){
+this.clearSession();}),false);}else if(ss.isValue(window.self.attachEvent)){window.attachEvent('onbeforeunload',ss.Delegate.create(this,function(){
+this.clearSession();}));}},disableClearSessionOnBrowserUnload:function(){this.clearSessionOnUnload=false;},shouldShowTabs:function(){return tsConfig.tabs_allowed&&tsConfig.showTabs;},getWebClientContentSize:function(){var $0=this.getViewport();var $1=this.chromeMetrics();$0.h-=$1.h;$0.w-=$1.w;var $2=tsConfig.composite_size;var $3=tabBootstrap.Utility.$9($2,'minw');var $4=tabBootstrap.Utility.$9($2,'maxw');if(!!$3&&$0.w<$3){$0.w=$3;}else if(!!$4&&$0.w>$4){$0.w=$4;}else if(tsConfig.showLytebox){$0.w=tsConfig.lyteboxedVizWidth;}var $5=tabBootstrap.Utility.$9($2,'minh');if(!!$5&&$0.h<$5){$0.h=$5;}else{var $6=tabBootstrap.Utility.$9($2,'maxh');if(!!$6&&$0.h>$6){$0.h=$6;}}return $0;},waitOnInitialLayoutModel:function(successCallback,errorCallback,onSecondaryResponse){if(this.hasBootstrapCompleted){errorCallback(null);return;}if(this.requestingBootstrapData){this._onSuccess=successCallback;this._onError=errorCallback;this._onSecondary=onSecondaryResponse;}else{this.hasBootstrapCompleted=true;this._onError=errorCallback;this._onSecondary=onSecondaryResponse;var $0=this.initialLayoutModel;var $1=this.initialLayoutError;if(ss.isValue($1)||ss.isNullOrUndefined($0)){errorCallback($1);}else{successCallback($0);if(ss.isValue(onSecondaryResponse)&&ss.isValue(this.secondaryResponses)){for(var $2=0;$2<this.secondaryResponses.length;$2++){onSecondaryResponse(this.secondaryResponses[$2]);}}}}},setPortSizeAndRequestInitialLayoutModel:function(){var $0=this.getWebClientContentSize();this.rid++;var $1=document.getElementById('staticImage');if(tsConfig.bootstrapOnMouseover){this.scaleImageToFit($1,$0);}var $2=new tabBootstrap.LayoutMetrics(null);this.metricsUsedForInitialLayout=$2;var $3=[];$3.push('w='+encodeURIComponent($0.w.toString()));$3.push('h='+encodeURIComponent($0.h.toString()));tsConfig.is_rendering_enabled=tsConfig.is_browser_rendering_requested&&tabBootstrap.Utility.$10();$3.push('isBrowserRendering='+tsConfig.is_rendering_enabled);$3.push('browserRenderingThreshold='+tsConfig.browser_rendering_threshold);$3.push('clientNum='+encodeURIComponent(tabBootstrap.Utility.$11()));var $4=tabBootstrap.Utility.$12();$3.push('devicePixelRatio='+encodeURIComponent($4.toString()));if(ss.isValue(tsConfig.is_mobile)&&tsConfig.is_mobile){$3.push('imageSizeLimit='+encodeURIComponent((5242880).toString()));}if(ss.isValue(tsConfig.sheetId)){$3.push('sheet_id='+encodeURIComponent(tsConfig.sheetId.toString()));}if(ss.isValue(tsConfig.showParams)){$3.push('showParams='+encodeURIComponent(tsConfig.showParams.toString()));}if(ss.isValue(tsConfig.stickySessionKey)){$3.push('stickySessionKey='+encodeURIComponent(tsConfig.stickySessionKey.toString()));}if(ss.isValue(tsConfig.filterTileSize)){$3.push('filterTileSize='+encodeURIComponent(tsConfig.filterTileSize.toString()));}if(ss.isValue(tsConfig.locale)){$3.push('locale='+encodeURIComponent(tsConfig.locale.toString()));}if(ss.isValue(tsConfig.language)){$3.push('language='+encodeURIComponent(tsConfig.language.toString()));}if(ss.isValue(tsConfig.syncSession)&&!!tsConfig.syncSession.length&&typeof(tsConfig.syncSession)==='string'){$3.push('sync_session_state='+encodeURIComponent(this.getSyncSessionState(tsConfig.syncSession)));}var $5=$3.join('&');var $6=new tabBootstrap.BootstrapSession(tsConfig.sessionid);var $7=$6.formatSessionMethod('bootstrapSession');var $8=this.rid;var $9=this;var $A=ss.Delegate.create(this,function($p1_0){
+$p1_0.rid=$8;if(ss.isValue(this._onSuccess)){this.hasBootstrapCompleted=true;this._onSuccess($p1_0);}this.markInitialLayoutModelAsFinished($p1_0,null);});var $B=function($p1_0){
+if(ss.isValue($9._onSecondary)){$9._onSecondary($p1_0);}else{$9.appendSecondaryResponse($p1_0);}};var $C=ss.Delegate.create(this,function($p1_0){
+if(ss.isValue(this._onError)){this.hasBootstrapCompleted=true;this._onError($p1_0);}this.markInitialLayoutModelAsFinished(null,$p1_0);});this.requestingBootstrapData=true;if(!tsConfig.bootstrapOnMouseover){tabBootstrap.Utility.xhrPostJsonChunked($7,$5,$A,$B,$C,true);return;}var $D=document.getElementById('initializing_thin_client');this.hideLoadIndicators($D,$1);var $E=ss.Delegate.create(this,function(){
+this.showLoadIndicators($D,$1);tabBootstrap.Utility.xhrPostJsonChunked($7,$5,$A,$B,$C,true);});if(ss.isValue($1)){if(ss.isValue($1.addEventListener)){$1.addEventListener('mouseover',tabBootstrap.ViewerBootstrap.makeOneTimeListener($E),false);}else if(ss.isValue($1.attachEvent)){$1.attachEvent('onmouseover',tabBootstrap.ViewerBootstrap.makeOneTimeHandler($E));}}},showLyteboxIfNeeded:function(){if(tsConfig.showLytebox){document.getElementById('primaryContent').style.display='block';document.getElementById('primaryContentLink').style.display='';document.getElementById('centeringContainer').className='lyteboxed';document.getElementById('lyteboxClose').style.display='block';document.body.className+=' lyteboxed';}},getViewport:function(){if(tsConfig.is_mobile_device&&!tsConfig.embedded){return tabBootstrap.Utility.$F();}return tabBootstrap.Utility.$D();},getSyncSessionState:function($p0){var $0=$p0.split('/');var $1=new tabBootstrap.BootstrapSession($0[1],'/'+$0[0]);var $2=$1.formatSessionMethod('get_global_filters');return tabBootstrap.Utility.xhrGetXmlSynchronous($2,null);},chromeMetrics:function(){var $0=0;if(this.toolbarDisplayed){$0+=this.toolbarHeight;}if(tsConfig.watermarkdisplay){$0+=this.watermarkHeight;}$0+=this.get_authoringToolbarHeight();$0+=this.get_authoringMastheadHeight();$0+=this.get_authoringShelfHeight();$0+=this.get_authoringTabsHeight();$0+=this.get_tabsHeight();var $1=0;$1+=this.get_authoringShelfWidth();$1+=this.get_authoringInitialLeftAreaWidth();return tabBootstrap.$create_Metric($1,$0);},showLoadIndicators:function($p0,$p1){if(ss.isValue($p0)){$p0.style.display='block';}if(ss.isValue($p1)){$p1.style.cursor='wait';}},hideLoadIndicators:function($p0,$p1){if(!ss.isNullOrUndefined($p0)){$p0.style.display='none';}if(!ss.isNullOrUndefined($p1)){$p1.style.cursor='default';}},clearSession:function(){if(!this.clearSessionOnUnload){return;}var $0=new tabBootstrap.BootstrapSession(tsConfig.sessionid).formatSessionMethod('clear');var $1=function(){
+};tabBootstrap.Utility.xhrPostJson($0,null,$1,$1,false);},mixin:function($p0){var $dict1=$p0;for(var $key2 in $dict1){var $0={key:$key2,value:$dict1[$key2]};var $1=this[$0.key];if(ss.isNullOrUndefined($1)||$1!==$p0[$0.key]){this[$0.key]=$p0[$0.key];}}},markInitialLayoutModelAsFinished:function($p0,$p1){this.initialLayoutError=$p1;this.initialLayoutModel=$p0;delete this._onSuccess;this.requestingBootstrapData=false;},appendSecondaryResponse:function($p0){if(ss.isValue(this.secondaryResponses)){this.secondaryResponses.add($p0);}else{this.secondaryResponses=[$p0];}},scaleImageToFit:function($p0,$p1){var $0=$p0.style.backgroundImage.replace(new RegExp('"','g'),'').replace(new RegExp('url\\((.*)\\)','gi'),'$1');var $1=document.createElement('img');var $2=ss.Delegate.create(this,function(){
+var $1_0=this.chromeMetrics();var $1_1=tabBootstrap.$create_Metric($p1.w+$1_0.w-parseInt($p0.style.left,10),$p1.h+$1_0.h-parseInt($p0.style.top,10));if($1_1.h/$1.height<$1_1.w/$1.width){var $1_2=Math.round($1_1.h*$1.width/$1.height);$p0.style.backgroundSize=$1_2+'px '+$1_1.h+'px';}else{var $1_3=Math.round($1_1.w*$1.height/$1.width);$p0.style.backgroundSize=$1_1.w+'px '+$1_3+'px';}});if(ss.isValue($1.addEventListener)){$1.addEventListener('load',$2,false);}else if(ss.isValue($1.attachEvent)){$1.attachEvent('onload',function(){
+$2(null);});}else{$1.onload=$2;}var $3=function(){
+tsConfig.bootstrapOnMouseover=false;if(ss.isNullOrUndefined($p0)){return;}if(ss.isValue($p0.dispatchEvent)){var $1_0=document.createEvent('MouseEvents');$1_0.initMouseEvent('mouseover',true,true,window.self,null,0,0,0,0,false,false,false,false,null,null);$p0.dispatchEvent($1_0);}else if(ss.isValue($p0.fireEvent)){$p0.fireEvent('onmouseover');}};if(ss.isValue($1.addEventListener)){$1.addEventListener('error',$3,false);}else if(ss.isValue($1.attachEvent)){$1.attachEvent('onerror',function(){
+$3(null);});}else{$1.onerror=$3;}$1.src=$0;}}
+tabBootstrap.LayoutMetrics=function(scrollbarSize){this.$2();if(ss.isNullOrUndefined(scrollbarSize)){var $0=tabBootstrap.LayoutMetrics.getScrollbarSize();scrollbarSize=tabBootstrap.$create_Metric($0,$0);}this.scrollbar=tabBootstrap.$create_Metric(scrollbarSize.w,scrollbarSize.h);}
+tabBootstrap.LayoutMetrics.clone=function(other){var $0=new tabBootstrap.LayoutMetrics(null);var $dict1=tabBootstrap.LayoutMetrics.$0;for(var $key2 in $dict1){var $1={key:$key2,value:$dict1[$key2]};var $2=other[$1.key];if(ss.isValue($2)){$0[$1.key]=$2;}}return $0;}
+tabBootstrap.LayoutMetrics.getScrollbarSize=function(){if(tsConfig.is_mobile){return 0;}var $0=document.createElement('div');var $1=$0.style;$1.width='100px';$1.height='100px';$1.overflow='scroll';$1.position='absolute';$1.top='0px';$1.filter='alpha(opacity=0)';$1.opacity='0';$1.left='0px';var $2=document.createElement('div');$2.style.width='400px';$2.style.height='400px';$0.appendChild($2);document.body.appendChild($0);var $3=$0.offsetWidth-$0.clientWidth;document.body.removeChild($0);$0.removeChild($2);$0=$2=null;$3=($3>0)?$3:9;return $3;}
+tabBootstrap.LayoutMetrics.prototype={isMetricEqual:function(name,other){var $0=this[name];var $1=other[name];if(ss.isNullOrUndefined($0)&&ss.isNullOrUndefined($1)){return true;}else if(ss.isNullOrUndefined($0)||ss.isNullOrUndefined($1)){return false;}return $0.w===$1.w&&$0.h===$1.h;},isEmpty:function(){var $dict1=tabBootstrap.LayoutMetrics.$0;for(var $key2 in $dict1){var $0={key:$key2,value:$dict1[$key2]};if(ss.isValue(this[$0.key])){return false;}}return true;},deltaFrom:function(other){var $0=tabBootstrap.LayoutMetrics.clone(other);var $dict1=tabBootstrap.LayoutMetrics.$0;for(var $key2 in $dict1){var $1={key:$key2,value:$dict1[$key2]};if(this.isMetricEqual($1.key,$0)){delete $0[$1.key];}}return $0;},toPresModel:function(){var $0=[];var $dict1=tabBootstrap.LayoutMetrics.$0;for(var $key2 in $dict1){var $1={key:$key2,value:$dict1[$key2]};if(ss.isValue(this[$1.key])){var $2=this[$1.key];var $3=tabBootstrap.LayoutMetrics.$1[$1.key];if(ss.isNullOrUndefined($3)){continue;}var $4={};$4.clientUiMetricType=$3;$4.viewportSize={};$4.viewportSize.x=$2.w;$4.viewportSize.y=$2.h;$0.add($4);}}return $0;},toJson:function(){var $0=new ss.StringBuilder();$0.append('{\n');var $1=0;var $dict1=tabBootstrap.LayoutMetrics.$0;for(var $key2 in $dict1){var $3={key:$key2,value:$dict1[$key2]};$1++;}var $2=0;var $dict3=tabBootstrap.LayoutMetrics.$0;for(var $key4 in $dict3){var $4={key:$key4,value:$dict3[$key4]};if(ss.isValue(this[$4.key])){var $5=this[$4.key];$0.append('\t"'+$4.key+'": {\n');$0.append('\t\t"w": '+$5.w+',\n');$0.append('\t\t"h": '+$5.h+'\n');$0.append('\t}');if($2<$1-1){$0.append(',');}$0.append('\n');}++$2;}$0.append('}');return $0.toString();},$2:function(){var $dict1=tabBootstrap.LayoutMetrics.$0;for(var $key2 in $dict1){var $0={key:$key2,value:$dict1[$key2]};this[$0.key]=$0.value;}}}
+tabBootstrap.BootstrapSession=function(id,prefix){this.id=id;var $0=tabBootstrap.BaseUrlFormatter.formatBaseUrl();this.$0=tabBootstrap.BaseUrlFormatter.formatUrlRoot($0,prefix);}
+tabBootstrap.BootstrapSession.prototype={id:null,$0:null,formatSessionMethod:function(method){return tabBootstrap.BaseUrlFormatter.formatSessionMethod(method,this.id,this.$0);}}
+tabBootstrap.BaseUrlFormatter.registerClass('tabBootstrap.BaseUrlFormatter');tabBootstrap.Utility.registerClass('tabBootstrap.Utility');tabBootstrap.ViewerBootstrap.registerClass('tabBootstrap.ViewerBootstrap');tabBootstrap.LayoutMetrics.registerClass('tabBootstrap.LayoutMetrics');tabBootstrap.BootstrapSession.registerClass('tabBootstrap.BootstrapSession');tabBootstrap.Utility.$0=new RegExp('\\s');tabBootstrap.Utility.$1=new RegExp('^\\s+');tabBootstrap.Utility.$2=new RegExp('\\s+$');tabBootstrap.Utility.$3=new RegExp('^[\\],:{}\\s]*$');tabBootstrap.Utility.$4=new RegExp('\\\\(?:["\\\\\\/bfnrt]|u[0-9a-fA-F]{4})','g');tabBootstrap.Utility.$5=new RegExp('"[^"\\\\\\n\\r]*"|true|false|null|-?\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d+)?','g');tabBootstrap.Utility.$6=new RegExp('(?:^|:|,)(?:\\s*\\[)+','g');(function(){if(tabBootstrap.Utility.$0.test('\\xA0')){tabBootstrap.Utility.$1=new RegExp('^[\\s\\xA0]+');tabBootstrap.Utility.$2=new RegExp('[\\s\\xA0]+$');}})();
+tabBootstrap.ViewerBootstrap.ipadImageSizeLimit=5242880;tabBootstrap.ViewerBootstrap._instance=null;tabBootstrap.LayoutMetrics.$0=null;tabBootstrap.LayoutMetrics.$1={};(function(){tabBootstrap.LayoutMetrics.$0={};tabBootstrap.LayoutMetrics.$0['scrollbar']=tabBootstrap.$create_Metric(17,17);tabBootstrap.LayoutMetrics.$0['qfixed']=tabBootstrap.$create_Metric(0,5);tabBootstrap.LayoutMetrics.$0['qslider']=tabBootstrap.$create_Metric(0,18);tabBootstrap.LayoutMetrics.$0['qreadout']=tabBootstrap.$create_Metric(0,20);tabBootstrap.LayoutMetrics.$0['cfixed']=tabBootstrap.$create_Metric(0,6);tabBootstrap.LayoutMetrics.$0['citem']=tabBootstrap.$create_Metric(0,18);tabBootstrap.LayoutMetrics.$0['ccustomitem']=tabBootstrap.$create_Metric(0,9);tabBootstrap.LayoutMetrics.$0['hfixed']=tabBootstrap.$create_Metric(0,21);tabBootstrap.LayoutMetrics.$0['hitem']=tabBootstrap.$create_Metric(0,18);tabBootstrap.LayoutMetrics.$0['cmslider']=tabBootstrap.$create_Metric(0,49);tabBootstrap.LayoutMetrics.$0['cmdropdown']=tabBootstrap.$create_Metric(0,29);tabBootstrap.LayoutMetrics.$0['cmpattern']=tabBootstrap.$create_Metric(0,29);tabBootstrap.LayoutMetrics.$0['capply']=tabBootstrap.$create_Metric(0,21);tabBootstrap.LayoutMetrics.$0['cmtypeinsearch']=tabBootstrap.$create_Metric(0,22);tabBootstrap.LayoutMetrics.$0['rdate']=tabBootstrap.$create_Metric(0,28);if(tsConfig.is_mobile){tabBootstrap.LayoutMetrics.$0['scrollbar']=tabBootstrap.$create_Metric(0,0);}tabBootstrap.LayoutMetrics.$1['scrollbar']='scrollbar-metric';tabBootstrap.LayoutMetrics.$1['qfixed']='q-filter-fixed-metric';tabBootstrap.LayoutMetrics.$1['qslider']='q-filter-slider-metric';tabBootstrap.LayoutMetrics.$1['qreadout']='q-filter-readout-metric';tabBootstrap.LayoutMetrics.$1['cfixed']='c-filter-fixed-metric';tabBootstrap.LayoutMetrics.$1['citem']='c-filter-item-metric';tabBootstrap.LayoutMetrics.$1['capply']='c-filter-apply-metric';tabBootstrap.LayoutMetrics.$1['hfixed']='h-filter-fixed-metric';tabBootstrap.LayoutMetrics.$1['hitem']='h-filter-item-metric';tabBootstrap.LayoutMetrics.$1['cmslider']='cm-slider-filter-metric';tabBootstrap.LayoutMetrics.$1['cmdropdown']='cm-dropdown-filter-metric';tabBootstrap.LayoutMetrics.$1['cmpattern']='cm-pattern-filter-metric';tabBootstrap.LayoutMetrics.$1['rdate']='r-date-filter-metric';tabBootstrap.LayoutMetrics.$1['rdatep']='r-date-p-filter-metric';tabBootstrap.LayoutMetrics.$1['cmtypeinsearch']='cm-type-in-search-metric';tabBootstrap.LayoutMetrics.$1['ccustomitem']='c-filter-custom-item-metric';})();
+var viewerBootstrap=tabBootstrap.ViewerBootstrap.get_instance();viewerBootstrap.setPortSizeAndRequestInitialLayoutModel();viewerBootstrap.showLyteboxIfNeeded();restoreTypeSystem();})();// This script was generated using Script# v0.7.4.0
+
+  //]]>
+  </script>
+  
+
+
+<script type="text/javascript" src="dojo.xd.js"></script>
+
+<script type="text/javascript" src="jquery.min(1).js"></script>
+<script type="text/javascript" src="mscorlib.js"></script>
+<script type="text/javascript" src="jsstrings_en.js"></script>
+<script type="text/javascript" src="clientweb.xd.js"></script>
+
+
+  
+  
+    <script type="text/javascript" src="vqlweb.js"></script>
+    
+  
+
+
+<script type="text/javascript">
+  (function(w) {
+    w.tableau = w.tableau || {};
+    w.tableau.messages = {
+      unexpected_title: "Unexpected Error",
+      
+        
+        unexpected: "An unexpected error occurred on the server. If you continue to receive this error you can post a message to our public forums at http://www.tableausoftware.com/public/community."
+        
+        
+      
+    };
+  }(window));
+  dojo.addOnLoad(function() {
+    tab.Application.startup();
+  });  
+</script>
+
+</div>
+
+
+
+<script type="text/javascript">
+function adjustForMinMaxDashboardSizes(image)
+{
+    var v = {h:image.parentNode.offsetHeight, w:image.parentNode.offsetWidth};
+
+    //adjust for min/max dashboard sizes
+    var cs = tsConfig.composite_size;
+    
+    if (cs.maxw === 0 && cs.maxh === 0)
+      return;
+
+    if (v.w < cs.minw)
+      v.w = cs.minw;
+    else if (cs.maxw !== 0 && v.w > cs.maxw)
+      v.w = cs.maxw;
+
+    if (v.h < cs.minh)
+      v.h = cs.minh;
+    else if (cs.maxh !== 0 && v.h > cs.maxh)
+      v.h = cs.maxh;
+
+    // TODO use CSS styles a per FOGBUGZ issue 57662
+    // 30px + 1px border for tabs; 8px + 1px border for no tabs
+    // There is always an 8px border on dashboards that is not user-configurable    
+    image.style.height = (v.h - 9) + "px";
+    image.style.width = (v.w - 8) + "px"; // 8px is added to all dashboards
+}
+
+function adjustHeightForAutoSizedVizes(image)
+{
+    if (image.style.height !== "auto")
+      return;
+
+    var scaledBackgroundHeight = parseInt(image.style.backgroundSize.split(" ")[1], 10);
+    if (! scaledBackgroundHeight)
+      return;
+
+    image.style.height = scaledBackgroundHeight+"px";
+}
+
+function adjustWidthForAutoSizedVizes(image)
+{
+    if (image.style.width !== "auto")
+      return;
+
+    var scaledBackgroundWidth = parseInt(image.style.backgroundSize.split(" ")[0], 10);
+    if (! scaledBackgroundWidth)
+      return;
+
+    image.style.width = scaledBackgroundWidth+"px";
+}
+
+function resizeStaticImage(e)
+{
+    var image = document.getElementById("staticImage");
+    if (image === null) return;
+
+    adjustForMinMaxDashboardSizes(image);
+    adjustHeightForAutoSizedVizes(image);
+    adjustWidthForAutoSizedVizes(image);
+
+}
+resizeStaticImage();
+</script>
+
+
+
+
+<div style="display: none;"></div></body></html>

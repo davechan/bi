@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)http://onlinehelp.tableausoftware.com/samples/en-us/js_api/tutorial.htm -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>JavaScript API Tutorial</title>
+  <link type="text/css" rel="stylesheet" href="./JavaScript API Tutorial_files/jquery-ui-1.10.0.custom.css">
+  <link type="text/css" rel="stylesheet" href="./JavaScript API Tutorial_files/Modern.css">
+  <link type="text/css" rel="stylesheet" href="./JavaScript API Tutorial_files/tutorial.css">
+  <script type="text/javascript" src="./JavaScript API Tutorial_files/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="./JavaScript API Tutorial_files/jquery-ui-1.10.0.custom.js"></script>
+  <script type="text/javascript" src="./JavaScript API Tutorial_files/tableau_v8.js"></script>
+  <script type="text/javascript" src="./JavaScript API Tutorial_files/tutorial.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#tabs").tabs();
+      $("#dialog").dialog({
+        autoOpen: false,
+        closeOnEscape: true,
+        maxHeight: 400
+      });
+      $(".runCode button").button({
+        icons: {
+          primary: "ui-icon-play"
+        }
+      });
+      $(".backButton").button({
+        icons: {
+          primary: "ui-icon-carat-1-w"
+        }
+      });
+      $(".nextButton").button({
+        icons: {
+          secondary: "ui-icon-carat-1-e"
+        }
+      });
+      $("#showJsFileLink").button({
+        icons: {
+          primary: "ui-icon-newwin"
+        },
+        text: false
+      });
+      $("#startDemoButton").button().click(startDemo);
+    });
+
+    function startDemo() {
+      $("#introDiv").fadeOut("slow", function () {
+        $("#tableauViz, #tabs").fadeIn("slow");
+      });
+    }
+
+    function showTab(index) {
+      $("#tabs").tabs("option", "active", index);
+    }
+  </script>
+</head>
+<body>
+  <div id="introDiv" style="display: none;">
+    <h1 id="heading">JavaScript API Tutorial</h1>
+    <p id="introPara">
+      This tutorial is a sample web application, created with Tableau's JavaScript API. It's designed to help you explore and learn
+     about the API using a series of steps that guide you through the basics. To get started, click the button below.
+    </p>
+    <p>
+      <button id="startDemoButton" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Start the tutorial</span></button>
+    </p>
+  </div>
+  
+  <div id="tableauViz" class="ui-widget-content ui-corner-all" style="display: block;"><div style="position: relative; top: 0px; left: 0px; right: 0px; bottom: 0px; border: 0px; padding: 0px; margin: 0px; overflow: hidden;"><iframe frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" src="./JavaScript API Tutorial_files/GDPpercapita.htm" style="width: 1420px; height: 452px; display: block;"></iframe></div></div>
+  <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all" style="display: block;">
+    <a id="showJsFileLink" href="./JavaScript API Tutorial_files/tutorial.js" target="_blank" title="Show entire tutorial.js file" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-newwin"></span><span class="ui-button-text">Show .js file</span></a>
+    <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+      <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="step1" aria-labelledby="ui-id-1" aria-selected="true"><a href="http://onlinehelp.tableausoftware.com/samples/en-us/js_api/tutorial.htm#step1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">1. Create</a></li>
+      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="step2" aria-labelledby="ui-id-2" aria-selected="false"><a href="http://onlinehelp.tableausoftware.com/samples/en-us/js_api/tutorial.htm#step2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">2. Filter</a></li>
+      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="step3" aria-labelledby="ui-id-3" aria-selected="false"><a href="http://onlinehelp.tableausoftware.com/samples/en-us/js_api/tutorial.htm#step3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">3. Tabs</a></li>
+      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="step4" aria-labelledby="ui-id-4" aria-selected="false"><a href="http://onlinehelp.tableausoftware.com/samples/en-us/js_api/tutorial.htm#step4" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-4">4. Select</a></li>
+      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="step5" aria-labelledby="ui-id-5" aria-selected="false"><a href="http://onlinehelp.tableausoftware.com/samples/en-us/js_api/tutorial.htm#step5" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-5">5. Chain Calls</a></li>
+      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="step6" aria-labelledby="ui-id-6" aria-selected="false"><a href="http://onlinehelp.tableausoftware.com/samples/en-us/js_api/tutorial.htm#step6" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-6">6. Sheets</a></li>
+      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="step7" aria-labelledby="ui-id-7" aria-selected="false"><a href="http://onlinehelp.tableausoftware.com/samples/en-us/js_api/tutorial.htm#step7" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-7">7. Toolbar</a></li>
+      <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="step8" aria-labelledby="ui-id-8" aria-selected="false"><a href="http://onlinehelp.tableausoftware.com/samples/en-us/js_api/tutorial.htm#step8" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-8">8. Events</a></li>
+    </ul>
+    <div id="step1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+      <h3>Create the Viz</h3>
+      <p>
+        As you build your web application, the first step is to create, or instantiate the view. To do this, you create a new <code>Viz</code> object, passing the required parentElement (<code>document.getElementByID</code>) and url parameters, along with
+        any options, such as <code>hideTabs</code> and <code>hideToolbar</code>. Here's the code:
+      </p>
+      <pre>function initializeViz() {
+  var placeholderDiv = document.getElementById("tableauViz");
+  var url = "http://public.tableausoftware.com/views/WorldIndicators/GDPpercapita";
+  var options = {
+    width: placeholderDiv.offsetWidth,
+    height: placeholderDiv.offsetHeight,
+    hideTabs: true,
+    hideToolbar: true,
+    onFirstInteractive: function () {
+      workbook = viz.getWorkbook();
+      activeSheet = workbook.getActiveSheet();
+    }
+  };
+  viz = new tableauSoftware.Viz(placeholderDiv, url, options);
+}      </pre>
+      <p class="runCode">
+        <button onclick="$(&#39;#tableauViz&#39;).html(&#39;&#39;); initializeViz()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary ui-state-focus" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>
+        You should now see a view with which you can interact, just like you can with views on Tableau Server. If you don't see
+        a view above, it may need a few more moments to load, or you may need to use a
+        <a href="http://onlinehelp.tableausoftware.com/v8.0/server/en-us/help.htm#js_api_requ.htm" target="_blank">different web
+        browser</a>.
+      </p>
+      <p>
+        In the code above, the constructor for the <code>Viz</code> object handles loading the view. Specifying a function in the
+        <code>onFirstInteractive</code> option allows you to perform actions once the view has finished loading. In this case, the
+        function caches the <code>workbook</code> and <code>activeSheet</code> variables so they can be used later on. These two
+        variables were declared as global variables <a href="./JavaScript API Tutorial_files/tutorial.js" style="color: #3366BB" target="_blank">in the actual
+          script</a>. Typically you'll want to create the view when the page has finished loading and the browser is ready. If you're
+        using jQuery, this can be done using jQuery's ready handler:
+      </p>
+      <pre>$(initializeViz);</pre>
+      <p class="stepButtons">
+        <button class="nextButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-secondary" onclick="showTab(1)" role="button" aria-disabled="false"><span class="ui-button-text">Next</span><span class="ui-button-icon-secondary ui-icon ui-icon-carat-1-e"></span></button>
+      </p>
+    </div>
+    <div id="step2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+      <h3>Filter Values</h3>
+      <p>
+        Filtering is a core capability of Tableau Server. In the view above, there are already Region and Year quick filter controls,
+        but you can use the API to more tightly control what gets filtered. This is done using the <code>applyFilterAsync</code> method
+        on a <code>Worksheet</code> object, which was cached in the <code>activeSheet</code> variable in step 1.
+      </p>
+      <p>The following code filters the "Region" field to show only "The Americas":</p>
+      <pre>function filterSingleValue() {
+  activeSheet.applyFilterAsync(
+    "Region",
+    "The Americas",
+    tableauSoftware.FilterUpdateType.REPLACE);
+}      </pre>
+      <p class="runCode">
+        <button onclick="filterSingleValue()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>
+        You should now see that the view is filtered and only "The Americas" check box is selected under the Region
+      quick filter.
+      </p>
+      <p>
+        The next code sample shows you how to add two more values to the filter, using the same syntax but instead
+        specifying an array of values instead of a single value. Also note that <code>ADD</code> is used instead of <code>REPLACE</code>,
+        which instructs the view to add additional criteria to the filter instead of replacing the values that are currently filtered:
+      </p>
+      <pre>function addValuesToFilter() {
+  activeSheet.applyFilterAsync(
+    "Region",
+    ["Europe", "Middle East"],
+    tableauSoftware.FilterUpdateType.ADD);
+}      </pre>
+      <p class="runCode">
+        <button onclick="addValuesToFilter()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>Similarly, you can remove values from the filter by using <code>REMOVE</code>:</p>
+      <pre>function removeValuesFromFilter() {
+  activeSheet.applyFilterAsync(
+    "Region",
+    "Europe",
+    tableauSoftware.FilterUpdateType.REMOVE);
+}      </pre>
+      <p class="runCode">
+        <button onclick="removeValuesFromFilter()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>You can also include all values in the filter by using <code>ALL</code>.</p>
+      <p>
+        The filters you've seen so far have all had associated quick filters in the view. However, you can also create new filters. For example,
+        you can create a filter for the x-axis, the "F: GDP per capita (curr $)" field, and specify that you only want to
+        see countries where the GDP is greater than $40K, but less than $60K. To do this, you use the <code>applyRangeFilter</code> method,
+        using a range of values as the criteria:
+      </p>
+      <pre>function filterRangeOfValues() {
+  activeSheet.applyRangeFilterAsync(
+    "F: GDP per capita (curr $)",
+    {
+      min: 40000,
+      max: 60000
+    },
+    tableauSoftware.FilterUpdateType.REPLACE);
+}      </pre>
+      <p class="runCode">
+        <button onclick="filterRangeOfValues()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>Finally, you can clear the filters. For example:</p>
+      <pre>function clearFilters() {
+  activeSheet.clearFilterAsync("Region");
+  activeSheet.clearFilterAsync("F: GDP per capita (curr $)");
+}      </pre>
+      <p class="runCode">
+        <button onclick="clearFilters()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p class="stepButtons">
+        <button class="backButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" onclick="showTab(0)" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-carat-1-w"></span><span class="ui-button-text">Back</span></button>
+        <button class="nextButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-secondary" onclick="showTab(2)" role="button" aria-disabled="false"><span class="ui-button-text">Next</span><span class="ui-button-icon-secondary ui-icon ui-icon-carat-1-e"></span></button>
+      </p>
+    </div>
+    <div id="step3" aria-labelledby="ui-id-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+      <h3>Switch Tabs</h3>
+      <p>
+        Sometimes a single sheet in a workbook doesn't convey all of the information that you'd like your user to see. You can use the
+        API to switch from the current sheet to another published sheet within the same workbook (note that the workbook must have been
+        published to the server with
+        <a href="http://onlinehelp.tableausoftware.com/current/pro/online/en-us/help.htm#publish_workbooks_howto.html" target="_blank">Show
+        Sheets as Tabs</a> enabled). To switch sheets, you use the <code>activateSheetAsync</code> method on a <code>Workbook</code>
+        object, which was cached in a global <code>workbook</code> variable in step 1. Here's how you switch the sheet to a map worksheet
+        named "GDP per capita map".
+      </p>
+      <pre>function switchToMapTab() {
+  workbook.activateSheetAsync("GDP per capita map");
+}      </pre>
+      <p class="runCode">
+        <button onclick="switchToMapTab()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p class="stepButtons">
+        <button class="backButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" onclick="showTab(1)" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-carat-1-w"></span><span class="ui-button-text">Back</span></button>
+        <button class="nextButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-secondary" onclick="showTab(3)" role="button" aria-disabled="false"><span class="ui-button-text">Next</span><span class="ui-button-icon-secondary ui-icon ui-icon-carat-1-e"></span></button>
+      </p>
+    </div>
+    <div id="step4" aria-labelledby="ui-id-4" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+      <h3>Select Values</h3>
+      <p>
+        Filtering a view is useful when you want to focus the user's attention on a specific set of values by removing all other
+        values not matching the filter criteria. However, sometimes it's useful to select values instead. This still focuses the
+        user's attention on specific values, but the context of other values remains in the view. To do this, you use the <code>selectMarksAsync</code>
+        method. The syntax is very similar to the <code>applyFilterAsync</code> method that you used previously. For example, the following code
+        selects all of the marks in the "Asia" region:
+      </p>
+      <pre>function selectSingleValue() {
+  workbook.getActiveSheet().selectMarksAsync(
+    "Region",
+    "Asia",
+    tableauSoftware.SelectionUpdateType.REPLACE);
+}      </pre>
+      <p class="runCode">
+        <button onclick="selectSingleValue()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>
+        The only change between the code above and the filter code you used earlier is that <code>tableauSoftware.SelectionUpdateType</code>
+        was specified instead of <code>tableauSoftware.FilterUpdateType</code>. Also, notice that <code>workbook.getActiveSheet()</code>
+        is used instead of the <code>activeSheet</code> global variable because the sheets were switched in step 3 and the
+        global variable wasn't updated to point to the new active sheet.
+      </p>
+      <p>In the following code sample, Africa and Oceania are added to the previous selection:</p>
+      <pre>function addValuesToSelection() {
+  workbook.getActiveSheet().selectMarksAsync(
+    "Region",
+    ["Africa", "Oceania"],
+    tableauSoftware.FilterUpdateType.ADD);
+}      </pre>
+      <p class="runCode">
+        <button onclick="addValuesToSelection()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>
+        Again, the code should look familiar since the syntax is almost identical to filtering. At this point, you've selected Asia, Africa,
+      and Oceania. The next code sample will demonstrate how to remove. In this case, you will remove countries that
+        have a GDP less than $5,000. To do this, you use a range just like you did for filtering, except you'll only specify a max value:
+      </p>
+      <pre>function removeFromSelection() {
+  workbook.getActiveSheet().selectMarksAsync(
+    "AVG(F: GDP per capita (curr $))",
+    {
+      max: 5000
+    },
+    tableauSoftware.FilterUpdateType.REMOVE);
+}      </pre>
+      <p class="runCode">
+        <button onclick="removeFromSelection()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>Clearing the selection is just as easy as clearing a filter, using the <code>clearSelectedMarksAsync</code> method:</p>
+      <pre>function clearSelection() {
+  workbook.getActiveSheet().clearSelectedMarksAsync();
+}      </pre>
+      <p class="runCode">
+        <button onclick="clearSelection()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p class="stepButtons">
+        <button class="backButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" onclick="showTab(2)" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-carat-1-w"></span><span class="ui-button-text">Back</span></button>
+        <button class="nextButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-secondary" onclick="showTab(4)" role="button" aria-disabled="false"><span class="ui-button-text">Next</span><span class="ui-button-icon-secondary ui-icon ui-icon-carat-1-e"></span></button>
+      </p>
+    </div>
+    <div id="step5" aria-labelledby="ui-id-5" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+      <h3>Chain Method Calls</h3>
+      <p>
+        You may have noticed a naming pattern with the methods used thus far. They all end with the <code>Async</code>
+        suffix, which stands for <i>asynchronous</i>. Programming on the web involves communicating with servers, which usually
+        take time to compute and return a value. To avoid locking up the user's browser while you're waiting for
+        a response from the server, you instruct the user's browser to notify your code when the server has sent a response to
+        your original request.
+      </p>
+      <p>
+        The Tableau JavaScript API uses Promises (specifically the <a href="http://wiki.commonjs.org/wiki/Promises/A" target="_blank">Promises/A</a> specification) to notify your code when an operation is complete. This allows you to chain method calls using
+        an easy syntax. Each method that ends with <code>Async</code> returns a <code>Promise</code> object, containing three methods:
+      </p>
+      <ul>
+        <li><code>then(successCallback, errorCallback)</code> - the <code>successCallback</code> function is called when the operation
+          is successful, and likewise the <code>errorCallback</code> function is called when there is an error. Both parameters are
+          optional.</li>
+        <li><code>otherwise(errorCallback)</code> - called when an error occurs</li>
+        <li><code>always(callback)</code> - always called, whether the operation was successful or not</li>
+      </ul>
+      <p>
+        The following code sample demonstrates how you can use some of the methods you've learned thus far to chain a series of commands.
+      First you switch to the "GDP per capita by region" sheet. After that has finished, you apply a range filter. Once Tableau
+      Server has applied the filter, you select some marks.
+      </p>
+      <pre>function switchTabsThenFilterThenSelectMarks() {
+  workbook.activateSheetAsync("GDP per capita by region")
+    .then(function (newSheet) {
+      activeSheet = newSheet;
+
+      // It's important to return the promise so the next link in the chain
+      // won't be called until the filter completes.
+      return activeSheet.applyRangeFilterAsync(
+        "Date (year)",
+        {
+          min: new Date(Date.UTC(2002, 1, 1)),
+          max: new Date(Date.UTC(2008, 12, 31))
+        },
+        tableauSoftware.FilterUpdateType.REPLACE);
+    })
+    .then(function (filterFieldName) {
+      return activeSheet.selectMarksAsync(
+        "AGG(GDP per capita (weighted))",
+        {
+          min: 20000
+        },
+        tableauSoftware.SelectionUpdateType.REPLACE);
+    });
+}      </pre>
+      <p class="runCode">
+        <button onclick="switchTabsThenFilterThenSelectMarks()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>There are several important things to point out with the above code:</p>
+      <ul>
+        <li>Inside of a <code>then</code> function it does a <code>return</code> of another <code>Promise</code> object. This ensures that the
+          next link in the chain will not get run until the current link finishes.</li>
+        <li>Notice how the result of an operation is handled. The function inside the first <code>then</code> callback takes
+          a single <code>newSheet</code> parameter, since that's the promised return value from the <code>activateSheetAsync</code>
+          method. Similarly, the second <code>then</code> function gets a <code>filterFieldName</code> parameter, which is the name
+          of the field for the filter that was just applied. A full explanation of the promised return values for each <code>Async</code>
+          method is in the
+        <a href="http://onlinehelp.tableausoftware.com/v8.0/server/en-us/help.htm#js_api_ref.htm#JavaScript_API_Reference" target="_blank">JavaScript API Reference</a>.</li>
+      </ul>
+      <p>
+        Before moving on to the next step, let's take a look at how errors are handled inside a chain. The code below intentionally
+        causes an error to happen by leaving out some required parameters to the <code>applyFilterAsync</code> method:
+      </p>
+      <pre>function triggerError() {
+  workbook.activateSheetAsync("GDP per capita by region")
+    .then(function (newSheet) {
+      // Do something that will cause an error: leave out required parameters.
+      return activeSheet.applyFilterAsync("Date (year)");
+    })
+    .otherwise(function (err) {
+      alert("We purposely triggered this error to show how error handling happens with chained calls.\n\n " + err);
+    });
+}      </pre>
+      <p class="runCode">
+        <button onclick="triggerError()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p class="stepButtons">
+        <button class="backButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" onclick="showTab(3)" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-carat-1-w"></span><span class="ui-button-text">Back</span></button>
+        <button class="nextButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-secondary" onclick="showTab(5)" role="button" aria-disabled="false"><span class="ui-button-text">Next</span><span class="ui-button-icon-secondary ui-icon ui-icon-carat-1-e"></span></button>
+      </p>
+    </div>
+    <div id="step6" aria-labelledby="ui-id-6" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+      <h3>Work with Sheets</h3>
+      <p>
+        Workbooks created in Tableau Desktop contain worksheets and, sometimes, one or more dashboards. The dashboards themselves
+    typically contain one or more worksheets. This is why, in the API, the concept of "sheet" encompasses both worksheets
+    and dashboards. Worksheet and dashboard objects do not have the same set of actions, however. Worksheets are the only entry point for acting on
+    both worksheet and dashboard objects. You can't act directly on a dashboard object.
+      </p>
+      <p>
+        The code samples below illustrate how this works. The first code sample demonstrates how you would query all of a workbook's sheets.
+    After
+    you click <b>Run this code</b> the dialog that appears lists workbook's sheets:
+      </p>
+      <pre>function querySheets() {
+  var sheets = workbook.getPublishedSheetsInfo();
+  var text = getSheetsAlertText(sheets);
+  text = "Sheets in the workbook:\n" + text;
+  alert(text);
+}    </pre>
+      <p class="runCode">
+        <button onclick="querySheets()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>
+        Here's how you would query worksheets in a dashboard. Notice that the filter is still applied to the "GDP per region"
+      worksheet in the dashboard, but the marks are not selected:
+      </p>
+      <pre>function queryDashboard() {
+  workbook.activateSheetAsync("GDP per Capita Dashboard")
+    .then(function (dashboard) {
+      var worksheets = dashboard.getWorksheets();
+      var text = getSheetsAlertText(worksheets);
+      text = "Worksheets in the dashboard:\n" + text;
+      alert(text);
+    });
+}    </pre>
+      <p class="runCode">
+        <button onclick="queryDashboard()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>You'll notice that there are scrollbars on the viz. This is because the fixed size specified in the <code>Viz</code> constructor 
+      (step 1) is different than the fixed size specified for this dashboard by the workbook author. To see the entire dashboard, 
+      you can change the size behavior to <code>AUTOMATIC</code>, which tells the viz to fit the available space. 
+      This removes the scrollbars at the expense of making each <code>Worksheet</code> in the dashboard slightly smaller.</p>
+      <pre>function changeDashboardSize() {
+  workbook.activateSheetAsync("GDP per Capita Dashboard")
+    .then(function (dashboard) {
+      dashboard.changeSizeAsync({
+        behavior: tableauSoftware.SheetSizeBehavior.AUTOMATIC
+      });
+    });
+}
+      </pre>
+      <p class="runCode">
+        <button onclick="changeDashboardSize()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>
+        Now, here's how you select filters and change settings on multiple sheets within a dashboard. The code sample
+      applies to a dashboard with two worksheets:
+      </p>
+      <pre>  var dashboard, mapSheet, graphSheet;
+  workbook.activateSheetAsync("GDP per Capita Dashboard")
+    .then(function (sheet) {
+      dashboard = sheet;
+      mapSheet = dashboard.getWorksheets().get("Map of GDP per capita");
+      graphSheet = dashboard.getWorksheets().get("GDP per capita by region");
+      return mapSheet.applyFilterAsync("Region", "Middle East", tableauSoftware.FilterUpdateType.REPLACE);
+    })
+    .then(function () {
+      // Do these two steps in parallel since they work on different sheets.
+      mapSheet.applyFilterAsync("YEAR(Date (year))", 2010, tableauSoftware.FilterUpdateType.REPLACE);
+      return graphSheet.clearFilterAsync("Date (year)");
+    })
+    .then(function () {
+      return graphSheet.selectMarksAsync("YEAR(Date (year))", 2010, tableauSoftware.SelectionUpdateType.REPLACE);
+    });
+}      </pre>
+      <p class="runCode">
+        <button onclick="changeDashboard()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p class="stepButtons">
+        <button class="backButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" onclick="showTab(4)" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-carat-1-w"></span><span class="ui-button-text">Back</span></button>
+        <button class="nextButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-secondary" onclick="showTab(6)" role="button" aria-disabled="false"><span class="ui-button-text">Next</span><span class="ui-button-icon-secondary ui-icon ui-icon-carat-1-e"></span></button>
+      </p>
+    </div>
+    <div id="step7" aria-labelledby="ui-id-7" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+      <h3>Control Toolbar Commands</h3>
+      <p>
+        Tableau Server toolbar commands are available from the <code>Viz</code> object, which is the highest level object. Some commands
+      act on the entire worksheet or dashboard, and some act on only the selected zone. Export PDF and Export Image act on the entire
+      worksheet or dashboard. Here's the code for Export PDF:
+      </p>
+      <pre>function exportPDF() {
+  viz.showExportPDFDialog();
+}      </pre>
+      <p class="runCode">
+        <button onclick="exportPDF()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>And here's the code for Export Image:</p>
+      <pre>function exportImage() {
+  viz.showExportImageDialog();
+}      </pre>
+      <p class="runCode">
+        <button onclick="exportImage()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>
+        Unlike the Export PDF and Export Image commands, which apply to the entire worksheet or dashboard, the commands Export as
+      Crosstab and Export Data apply to the currently selected zone. If you select a mark or marks in the above view and then run
+      the code, you'll see that just the data for the selected marks is presented for export. The code for Export as CSV is as follows:
+      </p>
+      <pre>function exportCrossTab() {
+  viz.showExportCrossTabDialog();
+}      </pre>
+      <p class="runCode">
+        <button onclick="exportCrossTab()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>
+        When there aren't parameters specified for Export as Crosstab or Export Data, the currently selected zone is exported.
+     You can also specify a sheet name or you can pass in a sheet object. Here's the code for Export Data:
+      </p>
+      <pre>function exportData() {
+  viz.showExportDataDialog();
+}      </pre>
+      <p class="runCode">
+        <button onclick="exportData()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>Finally, the Revert All command restores the workbook to its original, published state:</p>
+      <pre>function revertAll() {
+  workbook.revertAllAsync();
+}      </pre>
+      <p class="runCode">
+        <button onclick="revertAll()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p class="stepButtons">
+        <button class="backButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" onclick="showTab(5)" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-carat-1-w"></span><span class="ui-button-text">Back</span></button>
+        <button class="nextButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-secondary" onclick="showTab(7)" role="button" aria-disabled="false"><span class="ui-button-text">Next</span><span class="ui-button-icon-secondary ui-icon ui-icon-carat-1-e"></span></button>
+      </p>
+    </div>
+    <div id="step8" aria-labelledby="ui-id-8" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+      <h3>Listen for Events</h3>
+      <p>
+        The operations you've done thus far controlled the viz from the outside in. One of the powerful
+        abilities of the Tableau JavaScript API is that it also gives you the ability to respond to interactions that your user
+        performs on the view. In other words, it lets you respond to events that occur from the inside out.
+      </p>
+      <p>
+        Listening to events is done similarly to how you listen to events in the browser. The <code>addEventListener</code>
+        method on the <code>Viz</code> class lets you register a callback function when a specific event occurs in the view. For
+        example, you can listen to the <code>marksselection</code> event, which gets raised whenever new marks become selected:
+      </p>
+      <pre>function listenToMarksSelection() {
+  viz.addEventListener(tableauSoftware.TableauEventName.MARKS_SELECTION, onMarksSelection);
+}
+
+function onMarksSelection(marksEvent) {
+  return marksEvent.getMarksAsync().then(reportSelectedMarks);
+}
+
+function reportSelectedMarks(marks) {
+  var html = [];
+  for (var markIndex = 0; markIndex &lt; marks.length; markIndex++) {
+    var pairs = marks[markIndex].getPairs();
+    html.push("&lt;b&gt;Mark " + markIndex + ":&lt;/b&gt;&lt;ul&gt;");
+    for (var pairIndex = 0; pairIndex &lt; pairs.length; pairIndex++) {
+      var pair = pairs[pairIndex];
+      html.push("&lt;li&gt;&lt;b&gt;fieldName:&lt;/b&gt; " + pair.fieldName);
+      html.push("&lt;br/&gt;&lt;b&gt;formattedValue:&lt;/b&gt; " + pair.formattedValue + "&lt;/li&gt;");
+    }
+    html.push("&lt;/ul&gt;");
+  }
+
+  var dialog = $("#dialog");
+  dialog.html(html.join(""));
+  dialog.dialog("open");
+}      </pre>
+      <p class="runCode">
+        <button onclick="listenToMarksSelection()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>
+        Click <b>Run this code</b> above, then manually select some marks in the view. A dialog will appear that describes each of
+      the marks you selected.
+      </p>
+      <p>
+        To stop listening to the event, you call the <code>removeEventListener</code> method, passing the same function that you
+        specified in <code>addEventListener</code>:
+      </p>
+      <pre>function removeMarksSelectionEventListener() {
+  viz.removeEventListener(tableauSoftware.TableauEventName.MARKS_SELECTION, onMarksSelection);
+}      </pre>
+      <p class="runCode">
+        <button onclick="removeMarksSelectionEventListener()" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-play"></span><span class="ui-button-text">Run this code</span></button>
+      </p>
+      <p>
+        Click <b>Run this code</b> again, then select some marks. Because <code>removeEventListener</code> was called you are not
+      notified, and the dialog doesn't appear.
+      </p>
+      <p>This tutorial has covered the basics on how to integrate Tableau Server views into your own web applications. For more in-depth
+      explanations, see the <a href="http://onlinehelp.tableausoftware.com/v8.0/server/en-us/help.htm#js_api_concepts.htm" target="_blank">
+      Concepts</a> topic, as well as the <a href="http://onlinehelp.tableausoftware.com/v8.0/server/en-us/help.htm#js_api_ref.htm" target="_blank">
+      API Reference</a>. </p>
+      <p class="stepButtons">
+        <button class="backButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" onclick="showTab(6)" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-carat-1-w"></span><span class="ui-button-text">Back</span></button>
+      </p>
+    </div>
+  </div>
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="dialog" aria-labelledby="ui-id-9" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-9" class="ui-dialog-title">Selected Marks</span><button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span></button></div><div id="dialog" class="ui-dialog-content ui-widget-content"></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div></body></html>
