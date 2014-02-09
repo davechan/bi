@@ -22,10 +22,14 @@
 
 </head>
 <body>
-<iframe id="iframeid" src="http://public.tableausoftware.com/views/CharityWho/Start?:embed=y&:tabs=no" width="1024" height="800"  frameborder="0" scrolling="no"></iframe> 
+
+
+<iframe id="iframeid" src="http://public.tableausoftware.com/views/CharityWho/Start?:embed=y&:tabs=no&:display_static_image=yes" width="1024" height="800"  frameborder="0" scrolling="no"></iframe> 
 
 <script type="text/javascript">
-    document.getElementById('iframeid').src = "http://public.tableausoftware.com/views/CharityWho/Start?:embed=y&:tabs=no";
+if( /Mobile Safari|webOS|iPhone|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    document.getElementById('iframeid').src = "http://public.tableausoftware.com/views/LT2/HourofDay?:embed=y&:tabs=no&:display_static_image=yes"; 
+}
 </script>
 
     <div id="disqus_thread"></div>
