@@ -60,6 +60,17 @@ document.getElementById("loading-image").onclick=restore;
 </script>
 </head>
 <body>
+
+<!--
+<div id="video-bg">
+				<video class="video-bg" autoplay="" loop="">
+					<source src="http://doubledutch.me/video/bg.mp4">
+					<source src="http://doubledutch.me/video/bg.webm">
+					<source class="video-bg" src="http://doubledutch.me/video/bg.ogv">		
+				</video>
+</div> 
+-->
+
 <div id="loading">
   <img id="loading-image" src="http://farm6.staticflickr.com/5517/12195375716_070e742bbe_h.jpg" alt="Loading..." />
 </div>
@@ -68,7 +79,9 @@ document.getElementById("loading-image").onclick=restore;
 
 <script type="text/javascript">
 if( /Mobile Safari|webOS|iPhone|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    document.getElementById('iframeid').src = "http://public.tableausoftware.com/views/LT2/HourofDay?:embed=y&:tabs=no&:display_static_image=yes"; 
+    document.getElementById('iframeid').src = "http://public.tableausoftware.com/views/CharityWhoMobile/Start?:embed=y&:tabs=no&:display_static_image=yes"; 
+	document.getElementById('iframeid').width ="640";
+	document.getElementById('iframeid').height ="850";
 }
 </script>
 
