@@ -10,6 +10,39 @@
 <meta property="og:description" content="Find out about fundraisers on Hong Kong's streets, and more..." />
 <meta property="og:site_name" content="Charity, Who?" />
 
+<style>
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: block;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+</style>
+<script>
+
+// restore page to normal
+function restore() {
+ document.body.removeChild(document.getElementById("loading"));
+}
+
+window.onload = function(){ 
+//document.getElementById("loading").style.display = "none" 
+document.getElementById("loading-image").onclick=restore;
+}
+</script>
 
 <script type="text/javascript">
 
@@ -27,9 +60,11 @@
 </script>
 </head>
 <body>
+<div id="loading">
+  <img id="loading-image" src="http://farm6.staticflickr.com/5517/12195375716_070e742bbe_h.jpg" alt="Loading..." />
+</div>
 
-
-<iframe id="iframeid" src="http://public.tableausoftware.com/views/CharityWho/Splash?:embed=y&:tabs=no&:display_static_image=yes" width="1440" height="800"  frameborder="0" scrolling="no"></iframe> 
+<iframe id="iframeid" src="http://public.tableausoftware.com/views/CharityWho/Start?:embed=y&:tabs=no&:display_static_image=yes" width="1440" height="800"  frameborder="0" scrolling="no"></iframe> 
 
 <script type="text/javascript">
 if( /Mobile Safari|webOS|iPhone|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -50,5 +85,5 @@ if( /Mobile Safari|webOS|iPhone|BlackBerry|IEMobile|Opera Mini/i.test(navigator.
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
-
+	
 </body></html>
