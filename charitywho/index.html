@@ -10,6 +10,46 @@
 <meta property="og:description" content="Find out about fundraisers on Hong Kong's streets, and more..." />
 <meta property="og:site_name" content="Charity, Who?" />
 
+<style>
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: block;
+  opacity: 1;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+.aspectwrapper {
+  display: inline-block; /* shrink to fit */
+  width: 100%;           /* whatever width you like */
+  position: relative;    /* so .content can use position: absolute */
+}
+</style>
+<script>
+
+// restore page to normal
+function restore() {
+ document.body.removeChild(document.getElementById("loading"));
+  document.body.removeChild(document.getElementById("loading-image"));
+}
+
+window.onload = function(){ 
+//document.getElementById("loading").style.display = "none" 
+document.getElementById("loading-image").onclick=restore;
+}
+</script>
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -24,27 +64,31 @@
   })();
 
 </script>
-
 </head>
 <body>
-<iframe id="iframeid" src="http://public.tableausoftware.com/views/CharityDev/Start?:embed=y&:tabs=no" width="1024" height="800"  frameborder="0" scrolling="no"></iframe> 
+
+<!--
+<div id="video-bg">
+				<video class="video-bg" autoplay="" loop="">
+					<source src="http://doubledutch.me/video/bg.mp4">
+					<source src="http://doubledutch.me/video/bg.webm">
+					<source class="video-bg" src="http://doubledutch.me/video/bg.ogv">		
+				</video>
+</div> 
+-->
+
+<div id="loading">
+  <img id="loading-image" src="http://davechan.github.io/bi/charitywho/splash.jpg" style="cursor: pointer; cursor: hand;" />
+</div>
+
+<iframe id="iframeid" src="http://public.tableausoftware.com/views/CharityWho/Start?:embed=y&:tabs=no&:display_static_image=yes" width="1024" height="625"  frameborder="0" scrolling="no"></iframe> 
 
 <script type="text/javascript">
-    document.getElementById('iframeid').src = "http://public.tableausoftware.com/views/CharityDev/Start?:embed=y&:tabs=no";
-</script>
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'charitywho'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
-
+if( /Mobile Safari|webOS|iPhone|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	document.getElementById('loading-image').src = "http://davechan.github.io/bi/charitywho/splash_m.jpg"
+    	document.getElementById('iframeid').src = "http://public.tableausoftware.com/views/CharityWhoMobile/Start?:embed=y&:tabs=no&:display_static_image=yes"; 
+	document.getElementById('iframeid').width ="640";
+	document.getElementById('iframeid').height ="850";
+}
+</script>	
 </body></html>
