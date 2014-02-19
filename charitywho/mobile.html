@@ -67,26 +67,10 @@ document.getElementById("loading-image").onclick=restore;
 </head>
 <body>
 
-<script type="text/javascript">
-<!--
-if (screen.width <= 699) {
-document.location = "http://davechan.github.io/bi/charitywho/mobile.html";
-}
-//-->
-</script>
-
 <div id="loading">
-  <img id="loading-image" src="http://davechan.github.io/bi/charitywho/splash.jpg" style="cursor: pointer; cursor: hand;" />
+  <img id="loading-image" src="http://davechan.github.io/bi/charitywho/splash_m.jpg" style="cursor: pointer; cursor: hand;" />
 </div>
 
-<iframe id="iframeid" src="http://public.tableausoftware.com/views/CharityWho/Start?:embed=y&:tabs=no&:display_static_image=yes" width="1024" height="625"  frameborder="0" scrolling="no"></iframe> 
+<iframe id="iframeid" src="http://public.tableausoftware.com/views/CharityWhoMobile/Start?:embed=y&:tabs=no&:display_static_image=yes" width="350" height="625"  frameborder="0" scrolling="no"></iframe> 
 
-<script type="text/javascript">
-if( /Mobile Safari|webOS|iPhone|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	document.getElementById('loading-image').src = "http://davechan.github.io/bi/charitywho/splash_m.jpg"
-    	document.getElementById('iframeid').src = "http://public.tableausoftware.com/views/CharityWhoMobile/Start?:embed=y&:tabs=no&:display_static_image=yes"; 
-	document.getElementById('iframeid').width ="350";
-	document.getElementById('iframeid').height ="625";
-}
-</script>	
 </body></html>
