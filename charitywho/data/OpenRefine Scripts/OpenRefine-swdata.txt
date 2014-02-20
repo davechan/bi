@@ -1,0 +1,397 @@
+[
+  {
+    "op": "core/column-split",
+    "description": "Split column OrgName by separator",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgName",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ", <br />, u",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrgName 1 using expression grel:replace(replace(value,\"'\",\"\"),\"[u\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgName 1",
+    "expression": "grel:replace(replace(value,\"'\",\"\"),\"[u\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrgName 2 using expression grel:replace(replace(value,\"]\",\"\"),\"'\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgName 2",
+    "expression": "grel:replace(replace(value,\"]\",\"\"),\"'\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column OrgAssocName by separator",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgAssocName",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ", <br />, u",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrgAssocName 1 using expression grel:replace(replace(value,\"'\",\"\"),\"[u\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgAssocName 1",
+    "expression": "grel:replace(replace(value,\"'\",\"\"),\"[u\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrgAssocName 2 using expression grel:replace(replace(value,\"]\",\"\"),\"'\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgAssocName 2",
+    "expression": "grel:replace(replace(value,\"]\",\"\"),\"'\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OrgName 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgName 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "CENTRAL CONSERVATORY OF MUSIC (HONG KONG FOUNDATION LIMITED, THE",
+          "CENTRAL CONSERVATORY OF MUSIC (HONG KONG) FOUNDATION LIMITED, THE"
+        ],
+        "to": "CENTRAL CONSERVATORY OF MUSIC (HONG KONG) FOUNDATION LIMITED, THE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "LING LIANG KINDERGARTEN ALUMNI ORCHESTRA",
+          "Ling Liang Kindergarten Alumni Orchestra"
+        ],
+        "to": "LING LIANG KINDERGARTEN ALUMNI ORCHESTRA"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "\"ST. PAULS CATHOLIC DAY NURSERY\"",
+          "\"St. Pauls Catholic Day Nursery\""
+        ],
+        "to": "\"ST. PAULS CATHOLIC DAY NURSERY\""
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "YAN CHAI HOSPITAL",
+          "Yan Chai Hospital"
+        ],
+        "to": "YAN CHAI HOSPITAL"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Caritas Elderly Centre - Tin Yuet",
+          "Caritas Tin Yuet Elderly Centre"
+        ],
+        "to": "Caritas Elderly Centre - Tin Yuet"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "FUK LOY CHUEN KAM CHUEN KINDERGARTEN",
+          "Fuk Loy Chuen Kam Chuen Kindergarten"
+        ],
+        "to": "FUK LOY CHUEN KAM CHUEN KINDERGARTEN"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "RAINLILY",
+          "RainLily"
+        ],
+        "to": "RAINLILY"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "SMALL WORLD CHRISTIAN KINDERGARTEN, <br />]",
+          "Small World Christian Kindergarten, <br />]"
+        ],
+        "to": "SMALL WORLD CHRISTIAN KINDERGARTEN"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "IMC OF CUHK FAA CHAN CHUN HA SECONDARY SCHOOL, THE (Alias / Notes: IMC = Incorporated Management Committee)",
+          "IMC OF CUHK FAA CHAN CHUN HA SECONDARY SCHOOL, THE Alias / Notes: IMC = Incorporated Management Committee"
+        ],
+        "to": "IMC OF CUHK FAA CHAN CHUN HA SECONDARY SCHOOL, THE (Alias / Notes: IMC = Incorporated Management Committee)"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "POOI TO MIDDLE SCHOOL",
+          "Pooi To Middle School"
+        ],
+        "to": "POOI TO MIDDLE SCHOOL"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "CHRISTIAN GRACE CHURCH LIMITED",
+          "GRACE CHRISTIAN CHURCH LIMITED"
+        ],
+        "to": "CHRISTIAN GRACE CHURCH LIMITED"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "\"ST. PAULS DAY NURSERY\"",
+          "\"St. Pauls Day Nursery\""
+        ],
+        "to": "ST. PAULS DAY NURSERY"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "FRIENDS OF THE HONG KONG MUSEUM OF ART,",
+          "FRIENDS OF THE HONG KONG MUSEUM OF ART, THE"
+        ],
+        "to": "FRIENDS OF THE HONG KONG MUSEUM OF ART, THE"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "POK OI HOSPITAL",
+          "Pok Oi Hospital"
+        ],
+        "to": "POK OI HOSPITAL"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "\"St. James Catholic Kindergarten\"",
+          "St. James Catholic Kindergarten"
+        ],
+        "to": "St. James Catholic Kindergarten"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "CHAN SUI KI (LA SALLE) PRIMARY SCHOOL",
+          "Chan Sui Ki (La Salle) Primary School"
+        ],
+        "to": "CHAN SUI KI (LA SALLE) PRIMARY SCHOOL"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "\"ST. PAULS KINDERGARTEN\"",
+          "\"St. Pauls Kindergarten\""
+        ],
+        "to": "\"ST. PAULS KINDERGARTEN\""
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "\"S.K.H. ST. THOMAS DAY CRECHE\"",
+          "\"S.K.H. St. Thomas Day Creche\""
+        ],
+        "to": "\"S.K.H. ST. THOMAS DAY CRECHE\""
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OrgName 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgName 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ALLIANCE BIBLE SEMINARY",
+          "ALLIANCE BIBLE SEMINARY/ Alliance Bible Seminary"
+        ],
+        "to": "ALLIANCE BIBLE SEMINARY"
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrgName 1 using expression grel:replace(replace(value,\", <br />]\",\"\"),\"\\\"\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgName 1",
+    "expression": "grel:replace(replace(value,\", <br />]\",\"\"),\"\\\"\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrgAssocName 1 using expression grel:replace(value,\"Operated by: \",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgAssocName 1",
+    "expression": "grel:replace(value,\"Operated by: \",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrgAssocName 1 using expression grel:replace(value,\"\\\"\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgAssocName 1",
+    "expression": "grel:replace(value,\"\\\"\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OrgAssocName 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgAssocName 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          ", <br />]"
+        ],
+        "to": ""
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrgAssocName 1 using expression grel:replace(value,\", <br />]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgAssocName 1",
+    "expression": "grel:replace(value,\", <br />]\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column OrgAssocName 2",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgAssocName 2",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "[查篤撑兒童粵劇協會"
+        ],
+        "to": "查篤撑兒童粵劇協會"
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrgName 1 using expression grel:replace(value,\"[<br />, u\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgName 1",
+    "expression": "grel:replace(value,\"[<br />, u\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrgName 1 using expression grel:replace(value,\"]\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OrgName 1",
+    "expression": "grel:replace(value,\"]\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]
