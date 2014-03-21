@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Charity, Who?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Charity">
+  <meta name="copyright" content="Dave Chan & Cindy Lam">
+  <link rel="shortcut icon" href="favicon.ico" >
+<meta property="og:title" content="Charity, Who?" />
+<meta property="og:url" content="http://davechan.github.io/bi/charitywho/" />
+<meta property="og:image" content="http://davechan.github.io/bi/charitywho/logo.png" />
+<meta property="og:description" content="Find out about fundraisers on Hong Kong's streets, and more..." />
+<meta property="og:site_name" content="Charity, Who?" />
+
+<style>
+#loading {
+  width: 349;
+  height: 600;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: block;
+  opacity: 1;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+.aspectwrapper {
+  display: inline-block; /* shrink to fit */
+  width: 100%;           /* whatever width you like */
+  position: relative;    /* so .content can use position: absolute */
+}
+</style>
+<script>
+
+// restore page to normal
+function restore() {
+ document.body.removeChild(document.getElementById("loading"));
+  document.body.removeChild(document.getElementById("loading-image"));
+}
+
+window.onload = function(){ 
+//document.getElementById("loading").style.display = "none" 
+document.getElementById("loading-image").onclick=restore;
+}
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+
+  _gaq.push(['_setAccount', 'UA-42092162-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+<div id="loading">
+  <img id="loading-image" src="http://davechan.github.io/bi/charitywho/splash_m.jpg" style="cursor: pointer; cursor: hand;" />
+</div>
+
+<iframe id="iframeid" src="http://public.tableausoftware.com/views/CharityWhoMobile/Start?:embed=y&:tabs=no&:display_static_image=yes&:showVizHome=no" width="350" height="625"  frameborder="0" scrolling="no"></iframe> 
+
+</body></html>
